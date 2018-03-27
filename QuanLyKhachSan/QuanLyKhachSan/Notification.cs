@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class LoginForm : Form
+    public partial class Notification : Form
     {
-        public LoginForm()
+        public Notification()
         {
             InitializeComponent();
         }
-
         private void close_Hover(object sender, EventArgs e)
         {
             pictureBox1.Image = Image.FromFile("../img/Close1.png");
@@ -39,9 +38,7 @@ namespace QuanLyKhachSan
 
         private void close_Click(object sender, EventArgs e)
         {
-            Notification nf = new Notification();
-            nf.Show();
-            
+            this.Close();
         }
 
         private void mini_Click(object sender, EventArgs e)
