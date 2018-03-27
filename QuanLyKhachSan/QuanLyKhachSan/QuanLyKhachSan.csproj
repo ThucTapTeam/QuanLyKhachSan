@@ -35,6 +35,7 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>F:\Developer\C#\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
