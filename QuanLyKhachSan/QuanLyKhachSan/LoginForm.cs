@@ -15,8 +15,20 @@ namespace QuanLyKhachSan
         public LoginForm()
         {
             InitializeComponent();
+            
         }
-
+        private const int CS_DROPSHADOW = 0x00020000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                // add the drop shadow flag for automatically drawing 
+                // a drop shadow around the form 
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
+            }
+        }
         private void close_Hover(object sender, EventArgs e)
         {
             pictureBox1.Image = Image.FromFile("../img/Close1.png");
