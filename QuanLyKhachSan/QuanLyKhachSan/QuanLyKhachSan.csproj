@@ -50,6 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatPhong.Designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\DoanhThuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layout\DoanhThuControl.Designer.cs">
+      <DependentUpon>DoanhThuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\FormDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layout\FormDichVu.Designer.cs">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\QLNhanVienControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layout\QLNhanVienControl.Designer.cs">
+      <DependentUpon>QLNhanVienControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\TrangChuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layout\TrangChuControl.Designer.cs">
+      <DependentUpon>TrangChuControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +101,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\DoanhThuControl.resx">
+      <DependentUpon>DoanhThuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\FormDichVu.resx">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\QLNhanVienControl.resx">
+      <DependentUpon>QLNhanVienControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\TrangChuControl.resx">
+      <DependentUpon>TrangChuControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

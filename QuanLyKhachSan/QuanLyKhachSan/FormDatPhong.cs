@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class LoginForm : Form
+    public partial class FormDatPhong : Form
     {
-        public LoginForm()
+        public FormDatPhong()
         {
             InitializeComponent();
-            
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -53,19 +52,12 @@ namespace QuanLyKhachSan
         {
             Notification nf = new Notification();
             nf.Show();
-            
+
         }
 
         private void mini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btlogin_Click(object sender, EventArgs e)
-        {
-            MainForm mf = new MainForm();
-            this.Hide();
-            mf.Show();
         }
     }
 }
