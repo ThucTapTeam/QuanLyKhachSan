@@ -15,7 +15,7 @@ namespace QuanLyKhachSan
         public FormDatPhong(string a)
         {
             InitializeComponent();
-            label1.Text = a;
+            label2.Text = a;
 
         }
         private const int CS_DROPSHADOW = 0x00020000;
