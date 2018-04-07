@@ -12,13 +12,13 @@ namespace QuanLyKhachSan.Layout
 {
     public partial class TrangChuControl : UserControl
     {
+        int tang;
         public TrangChuControl()
         {
             InitializeComponent();
             Phong(2);
             RoomColor(2);
-
-
+            tang = 2;
         }
         string sophong;
         
@@ -29,7 +29,7 @@ namespace QuanLyKhachSan.Layout
             string[] tenphong = new string[15];
             int[] phongso = new int[15];
             j = 0;
-            conn.trangchu(tenphong, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG=" + sotang, 0);
+            conn.trangchu(tenphong, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG=" + sotang+ "order by tenphong", 0);
             for(int i=0;i<tongsophong;i++)
             {
                 if(temp[i]==tenphong[j])
@@ -73,14 +73,16 @@ namespace QuanLyKhachSan.Layout
             }
 
         }
+        private int sophongdangthue;
+        private int[] phongso = new int[15];
+        
         public void RoomColor(int tangso)
         {
             sophong = conn.sophong("select count(TENPHONG) FROM PHONG WHERE SOTANG="+tangso, 0);
             Panel[] pn = new Panel[20];
-            int[] phongso = new int[15];
-            string[] tenphong = new string[15];
-            conn.trangchu(tenphong, "select TENPHONG FROM PHONG WHERE SOTANG=" + tangso, 0);
-            int sophongdangthue ;
+            string[] tenphong1 = new string[15];
+            conn.trangchu(tenphong1, "select TENPHONG FROM PHONG WHERE SOTANG=" + tangso, 0);
+           
             pn[0] = this.panel1;
             pn[1] = this.panel2;
             pn[2] = this.panel3;
@@ -96,21 +98,40 @@ namespace QuanLyKhachSan.Layout
             pn[12] = this.panel13;
             pn[13] = this.panel14;
             pn[14] = this.panel15;
-            phongso=CheckPhong(tenphong, Int32.Parse(sophong), tangso,out sophongdangthue);
+            phongso=CheckPhong(tenphong1, Int32.Parse(sophong), tangso,out sophongdangthue);
             for (int i=0;i< Int32.Parse(sophong);i++)
             {
                 pn[i].BackColor = Color.FromArgb(149, 165, 166) ;
                 pn[i].Cursor = Cursors.Hand;
+                
             }
             for(int i=0;i<sophongdangthue;i++)
             {
                 pn[phongso[i]].BackColor = Color.FromArgb(191, 57, 42);
             }
-            for(int i= Int32.Parse(sophong); i<=14;i++)
+            for (int i= Int32.Parse(sophong); i<=14;i++)
             {
                 pn[i].BackColor = Color.White;
                 pn[i].Cursor = Cursors.Default;
             }
+        }
+        private void Tang(int temp,int a)
+        {
+            string tenphong2 =null;
+            string tenphong3 = null;
+            string ghepmaphong = "P"+temp.ToString() + "0" + a.ToString();
+            tenphong2=conn.LayBien( "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG="+temp+" and phong.MAPHONG='"+ghepmaphong+"'", 0);
+            tenphong3=conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG  WHERE THUEPHONG.MAPHONG is null and PHONG.SOTANG="+temp+ " and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            if (tenphong2==null)
+            {
+                
+            }
+            else if(tenphong3==null)
+            {
+                FormDatPhong dp = new FormDatPhong(tenphong2);
+                dp.Show();
+            }
+           
         }
         private void DDTang_Select(object sender, EventArgs e)
         {
@@ -118,12 +139,86 @@ namespace QuanLyKhachSan.Layout
             {
                 Phong(2);
                 RoomColor(2);
+                tang = 2;
             }
             else if(DDTang.selectedValue.ToString() == "Tầng 3 ( Gồm 5 Phòng)")
             {
                 Phong(3);
                 RoomColor(3);
+                tang = 3;
             }
+        }
+        private void EventKTTang(int a)
+        {
+            if(tang==2)
+            {
+                Tang(2,a);
+            }
+            else if(tang==3)
+            {
+                Tang(3,a);
+            }
+        }
+
+        private void lb1(object sender, EventArgs e)
+        {
+            EventKTTang(1);
+        }
+        private void lb2(object sender, EventArgs e)
+        {
+            EventKTTang(2);
+        }
+        private void lb3(object sender, EventArgs e)
+        {
+            EventKTTang(3);
+        }
+        private void lb4(object sender, EventArgs e)
+        {
+            EventKTTang(4);
+        }
+        private void lb5(object sender, EventArgs e)
+        {
+            EventKTTang(5);
+        }
+        private void lb6(object sender, EventArgs e)
+        {
+            EventKTTang(6);
+        }
+        private void lb7(object sender, EventArgs e)
+        {
+            EventKTTang(7);
+        }
+        private void lb8(object sender, EventArgs e)
+        {
+            EventKTTang(8);
+        }
+        private void lb9(object sender, EventArgs e)
+        {
+            EventKTTang(9);
+        }
+        private void lb10(object sender, EventArgs e)
+        {
+            EventKTTang(10);
+        }
+        private void lb11(object sender, EventArgs e)
+        {
+            EventKTTang(11);
+        }
+        private void lb12(object sender, EventArgs e)
+        {
+            EventKTTang(12);
+        }
+        private void lb13(object sender, EventArgs e)
+        {
+            EventKTTang(13);
+        }
+        private void lb14(object sender, EventArgs e)
+        {
+            EventKTTang(14);
+        }
+        private void lb15(object sender, EventArgs e)
+        {
+            EventKTTang(15);
         }
     }
 }

@@ -37,6 +37,18 @@ namespace QuanLyKhachSan
                 i++;
             }
         }
+        public string LayBien( string strsql, int cot)
+        {
+            ketnoi();
+            string temp = null;
+            sqlcom = new SqlCommand(strsql, sqlconn);
+            sqldatar = sqlcom.ExecuteReader();
+            while (sqldatar.Read())
+            {
+                temp = sqldatar[cot].ToString();
+            }
+            return temp;
+        }
         public string sophong(string strsql,byte cot)
         {
             ketnoi();

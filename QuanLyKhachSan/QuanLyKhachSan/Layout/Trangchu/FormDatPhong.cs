@@ -12,9 +12,11 @@ namespace QuanLyKhachSan
 {
     public partial class FormDatPhong : Form
     {
-        public FormDatPhong()
+        public FormDatPhong(string a)
         {
             InitializeComponent();
+            label1.Text = a;
+
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -50,9 +52,8 @@ namespace QuanLyKhachSan
 
         private void close_Click(object sender, EventArgs e)
         {
-            Notification nf = new Notification();
-            nf.Show();
-
+            this.Close();
+            
         }
 
         private void mini_Click(object sender, EventArgs e)

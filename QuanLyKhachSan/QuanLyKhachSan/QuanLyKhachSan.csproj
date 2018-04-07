@@ -51,10 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="FormDatPhong.cs">
+    <Compile Include="Layout\Trangchu\FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDatPhong.Designer.cs">
+    <Compile Include="Layout\Trangchu\FormDatPhong.Designer.cs">
       <DependentUpon>FormDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\DoanhThuControl.cs">
@@ -101,7 +101,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDatPhong.resx">
+    <EmbeddedResource Include="Layout\Trangchu\FormDatPhong.resx">
       <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\DoanhThuControl.resx">

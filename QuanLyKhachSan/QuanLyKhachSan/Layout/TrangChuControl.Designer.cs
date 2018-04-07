@@ -193,6 +193,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(152, 62);
             this.panel10.TabIndex = 35;
+            this.panel10.Click += new System.EventHandler(this.lb10);
             // 
             // label10
             // 
@@ -214,6 +215,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(152, 62);
             this.panel5.TabIndex = 30;
+            this.panel5.Click += new System.EventHandler(this.lb5);
             // 
             // label5
             // 
@@ -235,6 +237,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(152, 62);
             this.panel9.TabIndex = 34;
+            this.panel9.Click += new System.EventHandler(this.lb9);
             // 
             // label9
             // 
@@ -256,6 +259,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(152, 62);
             this.panel4.TabIndex = 29;
+            this.panel4.Click += new System.EventHandler(this.lb4);
             // 
             // label4
             // 
@@ -277,6 +281,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(152, 62);
             this.panel8.TabIndex = 33;
+            this.panel8.Click += new System.EventHandler(this.lb8);
             // 
             // label8
             // 
@@ -298,6 +303,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(152, 62);
             this.panel3.TabIndex = 28;
+            this.panel3.Click += new System.EventHandler(this.lb3);
             // 
             // label3
             // 
@@ -319,6 +325,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(152, 62);
             this.panel7.TabIndex = 32;
+            this.panel7.Click += new System.EventHandler(this.lb7);
             // 
             // label7
             // 
@@ -340,6 +347,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(152, 62);
             this.panel6.TabIndex = 31;
+            this.panel6.Click += new System.EventHandler(this.lb6);
             // 
             // label6
             // 
@@ -361,6 +369,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(152, 62);
             this.panel2.TabIndex = 27;
+            this.panel2.Click += new System.EventHandler(this.lb2);
             // 
             // label2
             // 
@@ -382,6 +391,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(152, 62);
             this.panel1.TabIndex = 26;
+            this.panel1.Click += new System.EventHandler(this.lb1);
             // 
             // label1
             // 
@@ -456,6 +466,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(152, 62);
             this.panel11.TabIndex = 36;
+            this.panel11.Click += new System.EventHandler(this.lb11);
             // 
             // label11
             // 
@@ -477,6 +488,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(152, 62);
             this.panel12.TabIndex = 37;
+            this.panel12.Click += new System.EventHandler(this.lb12);
             // 
             // label12
             // 
@@ -498,6 +510,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(152, 62);
             this.panel13.TabIndex = 38;
+            this.panel13.Click += new System.EventHandler(this.lb13);
             // 
             // label13
             // 
@@ -519,6 +532,7 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(152, 62);
             this.panel14.TabIndex = 39;
+            this.panel14.Click += new System.EventHandler(this.lb14);
             // 
             // label14
             // 
@@ -540,6 +554,7 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(152, 62);
             this.panel15.TabIndex = 40;
+            this.panel15.Click += new System.EventHandler(this.lb15);
             // 
             // label15
             // 

@@ -62,11 +62,6 @@ namespace QuanLyKhachSan
             panelMain.Controls.Add(new Layout.QLNhanVienControl());
         }
 
-        private void bttrangchu_Hover(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btdown_Down(object sender, MouseEventArgs e)
         {
             
