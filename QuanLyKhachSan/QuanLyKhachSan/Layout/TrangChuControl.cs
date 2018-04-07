@@ -124,7 +124,7 @@ namespace QuanLyKhachSan.Layout
             tenphong3=conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG  WHERE THUEPHONG.MAPHONG is null and PHONG.SOTANG="+temp+ " and phong.MAPHONG='" + ghepmaphong + "'", 0);
             if (tenphong2==null)
             {
-                
+                //sdf
             }
             else if(tenphong3==null)
             {
