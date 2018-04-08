@@ -36,6 +36,7 @@ namespace QuanLyKhachSan
                 temp[i] = sqldatar[cot].ToString();
                 i++;
             }
+            ngatketnoi();
         }
         public string LayBien( string strsql, int cot)
         {
@@ -47,6 +48,7 @@ namespace QuanLyKhachSan
             {
                 temp = sqldatar[cot].ToString();
             }
+            ngatketnoi();
             return temp;
         }
         public string sophong(string strsql,byte cot)
@@ -59,14 +61,25 @@ namespace QuanLyKhachSan
             {
                 temp = sqldatar[cot].ToString();
             }
+            ngatketnoi();
             return temp;
         }
-        /*
-        public bool login(string strsql,byte cot)
+        
+        public bool login(string a,string strsql,byte cot)
         {
             ketnoi();
             bool temp = false;
-
-        }*/
+            sqlcom = new SqlCommand(strsql, sqlconn);
+            sqldatar = sqlcom.ExecuteReader();
+            while(sqldatar.Read())
+            {
+                if(a==sqldatar[cot].ToString())
+                {
+                    temp = true;
+                }
+            }
+            ngatketnoi();
+            return temp;
+        }
     }
 }

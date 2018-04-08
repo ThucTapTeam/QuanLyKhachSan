@@ -51,8 +51,7 @@ namespace QuanLyKhachSan
 
         private void close_Click(object sender, EventArgs e)
         {
-            Notification nf = new Notification();
-            nf.Show();
+            Application.Exit();
             
         }
 
@@ -63,9 +62,22 @@ namespace QuanLyKhachSan
 
         private void btlogin_Click(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
-            this.Hide();
-            mf.Show();
+            Connection cn = new Connection();
+            string username = tbuser.Text.ToString();
+            string password = tbpass.Text.ToString();
+            string hoten = null;
+            string chucvu = "Chưa có dữ liệu";
+            string avatar = "../img/avatar1.jpg";
+            if((cn.login(username.ToUpper(),"select MANHANVIEN FROM NHANVIEN", 0))==true && (cn.login(password, "select PASS FROM NHANVIEN", 0)) == true)
+            {
+                hoten = cn.LayBien("select HOTEN FROM NHANVIEN where MANHANVIEN='"+username +"'", 0);
+                chucvu = cn.LayBien("select CHUCVU FROM NHANVIEN where MANHANVIEN='" + username + "'", 0);
+                avatar = cn.LayBien("select AVATAR FROM NHANVIEN where MANHANVIEN='" + username + "'", 0);
+                MainForm mf = new MainForm(hoten,chucvu,avatar);
+                this.Hide();
+                mf.Show();
+            }
+            
         }
     }
 }

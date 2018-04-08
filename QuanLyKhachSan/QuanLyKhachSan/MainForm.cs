@@ -12,12 +12,15 @@ namespace QuanLyKhachSan
 {
     public partial class MainForm : Form
     {
-        
-        public MainForm()
+
+        public MainForm(string hoten, string chucvu, string avatar)
         {
             InitializeComponent();
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Layout.TrangChuControl());
+            label1.Text = hoten;
+            label2.Text = chucvu;
+            pictureBox1.Image = Image.FromFile(avatar);
         }
         private void close_Hover(object sender, EventArgs e)
         {
@@ -65,6 +68,13 @@ namespace QuanLyKhachSan
         private void btdown_Down(object sender, MouseEventArgs e)
         {
             
+        }
+
+        private void btlogout_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Hide();
         }
     }
 }
