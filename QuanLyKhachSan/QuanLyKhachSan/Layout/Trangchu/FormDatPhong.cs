@@ -12,11 +12,11 @@ namespace QuanLyKhachSan
 {
     public partial class FormDatPhong : Form
     {
-        public FormDatPhong(string a)
+        public FormDatPhong(string sophong,string tangso)
         {
             InitializeComponent();
-            label2.Text = a;
-
+            label2.Text = sophong;
+            label8.Text = "Tầng " + tangso;
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams

@@ -124,12 +124,12 @@ namespace QuanLyKhachSan.Layout
             tenphong3=conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG  WHERE THUEPHONG.MAPHONG is null and PHONG.SOTANG="+temp+ " and phong.MAPHONG='" + ghepmaphong + "'", 0);
             if (tenphong2==null)
             {
-                FormDatPhong dp = new FormDatPhong(tenphong3);
+                FormDatPhong dp = new FormDatPhong(tenphong3,temp.ToString());
                 dp.Show();
             }
             else if(tenphong3==null)
             {
-                FormDatPhong dp = new FormDatPhong(tenphong2);
+                FormDatPhong dp = new FormDatPhong(tenphong2,temp.ToString());
                 dp.Show();
             }
            
