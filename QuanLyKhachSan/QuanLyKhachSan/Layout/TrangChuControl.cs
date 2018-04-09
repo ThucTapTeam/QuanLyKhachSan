@@ -24,12 +24,12 @@ namespace QuanLyKhachSan.Layout
         
         Connection conn = new Connection();
         public string tenphongthue = null;
-        public int[] CheckPhong(string[] temp,int tongsophong,int sotang,out int j)
+        public int[] CheckPhong(string[] temp,string strsql,int tongsophong,int sotang,out int j)
         {
             string[] tenphong = new string[15];
             int[] phongso = new int[15];
             j = 0;
-            conn.trangchu(tenphong, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG=" + sotang+ "order by tenphong", 0);
+            conn.trangchu(tenphong, strsql, 0);
             for(int i=0;i<tongsophong;i++)
             {
                 if(temp[i]==tenphong[j])
@@ -74,8 +74,11 @@ namespace QuanLyKhachSan.Layout
 
         }
         private int sophongdangthue;
+        private int sophongtramuon;
+        private int sophongdattruoc;
         private int[] phongso = new int[15];
-        
+        private int[] phongtramuon = new int[15];
+        private int[] phongdattruoc = new int[15];
         public void RoomColor(int tangso)
         {
             sophong = conn.sophong("select count(TENPHONG) FROM PHONG WHERE SOTANG="+tangso, 0);
@@ -98,16 +101,25 @@ namespace QuanLyKhachSan.Layout
             pn[12] = this.panel13;
             pn[13] = this.panel14;
             pn[14] = this.panel15;
-            phongso=CheckPhong(tenphong1, Int32.Parse(sophong), tangso,out sophongdangthue);
+            phongso=CheckPhong(tenphong1, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG=" + tangso + "order by tenphong", Int32.Parse(sophong), tangso,out sophongdangthue);
+            phongtramuon = CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + tangso + " order by tenphong", Int32.Parse(sophong), tangso, out sophongtramuon);
+            phongdattruoc=CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) AND PHONG.SOTANG="+tangso+" order by tenphong", Int32.Parse(sophong), tangso, out sophongdattruoc);
             for (int i=0;i< Int32.Parse(sophong);i++)
             {
                 pn[i].BackColor = Color.FromArgb(149, 165, 166) ;
-                pn[i].Cursor = Cursors.Hand;
-                
+                pn[i].Cursor = Cursors.Hand;          
             }
             for(int i=0;i<sophongdangthue;i++)
             {
                 pn[phongso[i]].BackColor = Color.FromArgb(191, 57, 42);
+            }
+            for(int i=0;i<sophongtramuon;i++)
+            {
+                pn[phongtramuon[i]].BackColor = Color.FromArgb(230, 126, 34);
+            }
+            for (int i = 0; i < sophongdattruoc; i++)
+            {
+                pn[phongdattruoc[i]].BackColor = Color.FromArgb(41, 128, 185);
             }
             for (int i= Int32.Parse(sophong); i<=14;i++)
             {
@@ -119,18 +131,29 @@ namespace QuanLyKhachSan.Layout
         {
             string tenphong2 =null;
             string tenphong3 = null;
+            string tenphong4 = null;
+            string tenphong5 = null;
             string ghepmaphong = "P"+temp.ToString() + "0" + a.ToString();
             tenphong2=conn.LayBien( "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG="+temp+" and phong.MAPHONG='"+ghepmaphong+"'", 0);
             tenphong3=conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG  WHERE THUEPHONG.MAPHONG is null and PHONG.SOTANG="+temp+ " and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            if (tenphong2==null)
+            tenphong4 = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + temp + "  and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            tenphong5 = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            if (tenphong2!=null)
+            {
+                label16.Text = "phong dang o";
+            }
+            if(tenphong3!=null)
             {
                 FormDatPhong dp = new FormDatPhong(tenphong3,temp.ToString());
                 dp.Show();
             }
-            else if(tenphong3==null)
+            if(tenphong4!=null)
             {
-                FormDatPhong dp = new FormDatPhong(tenphong2,temp.ToString());
-                dp.Show();
+                label16.Text = "phong dang tra muon";
+            }
+            if(tenphong5!=null)
+            {
+                label16.Text = "phong dang dat coc";
             }
            
         }

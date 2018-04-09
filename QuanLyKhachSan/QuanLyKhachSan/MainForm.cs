@@ -21,6 +21,14 @@ namespace QuanLyKhachSan
             label1.Text = hoten;
             label2.Text = chucvu;
             pictureBox1.Image = Image.FromFile(avatar);
+            if(chucvu!="Quản lý")
+            {
+                btqlynhanvien.Enabled = false;
+            }
+            else
+            {
+                btqlynhanvien.Enabled = true;
+            }
         }
         private void close_Hover(object sender, EventArgs e)
         {
@@ -75,6 +83,18 @@ namespace QuanLyKhachSan
             LoginForm lf = new LoginForm();
             lf.Show();
             this.Hide();
+        }
+
+        private void btdichvu_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.FormDichVu());
+        }
+
+        private void btdoanhthu_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.DoanhThuControl());
         }
     }
 }
