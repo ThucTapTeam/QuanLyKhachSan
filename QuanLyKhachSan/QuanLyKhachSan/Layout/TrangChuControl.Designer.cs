@@ -72,7 +72,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -206,6 +205,7 @@
             this.label10.TabIndex = 7;
             this.label10.Text = ".";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label10.Click += new System.EventHandler(this.lb10);
             // 
             // panel5
             // 
@@ -228,6 +228,7 @@
             this.label5.TabIndex = 7;
             this.label5.Text = ".";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label5.Click += new System.EventHandler(this.lb5);
             // 
             // panel9
             // 
@@ -250,6 +251,7 @@
             this.label9.TabIndex = 7;
             this.label9.Text = ".";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label9.Click += new System.EventHandler(this.lb9);
             // 
             // panel4
             // 
@@ -272,6 +274,7 @@
             this.label4.TabIndex = 7;
             this.label4.Text = ".";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Click += new System.EventHandler(this.lb4);
             // 
             // panel8
             // 
@@ -294,6 +297,7 @@
             this.label8.TabIndex = 7;
             this.label8.Text = ".";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.Click += new System.EventHandler(this.lb8);
             // 
             // panel3
             // 
@@ -316,6 +320,7 @@
             this.label3.TabIndex = 7;
             this.label3.Text = ".";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.Click += new System.EventHandler(this.lb3);
             // 
             // panel7
             // 
@@ -338,6 +343,7 @@
             this.label7.TabIndex = 7;
             this.label7.Text = ".";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Click += new System.EventHandler(this.lb7);
             // 
             // panel6
             // 
@@ -360,6 +366,7 @@
             this.label6.TabIndex = 7;
             this.label6.Text = ".";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Click += new System.EventHandler(this.lb6);
             // 
             // panel2
             // 
@@ -382,6 +389,7 @@
             this.label2.TabIndex = 7;
             this.label2.Text = ".";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Click += new System.EventHandler(this.lb2);
             // 
             // panel1
             // 
@@ -404,6 +412,7 @@
             this.label1.TabIndex = 6;
             this.label1.Text = ".";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.lb1);
             // 
             // DDTang
             // 
@@ -479,6 +488,7 @@
             this.label11.TabIndex = 7;
             this.label11.Text = ".";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.Click += new System.EventHandler(this.lb11);
             // 
             // panel12
             // 
@@ -501,6 +511,7 @@
             this.label12.TabIndex = 7;
             this.label12.Text = ".";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label12.Click += new System.EventHandler(this.lb12);
             // 
             // panel13
             // 
@@ -523,6 +534,7 @@
             this.label13.TabIndex = 7;
             this.label13.Text = ".";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label13.Click += new System.EventHandler(this.lb13);
             // 
             // panel14
             // 
@@ -545,6 +557,7 @@
             this.label14.TabIndex = 7;
             this.label14.Text = ".";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label14.Click += new System.EventHandler(this.lb14);
             // 
             // panel15
             // 
@@ -567,22 +580,13 @@
             this.label15.TabIndex = 7;
             this.label15.Text = ".";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(129, 395);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "label16";
+            this.label15.Click += new System.EventHandler(this.lb15);
             // 
             // TrangChuControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuCustomDataGrid1);
             this.Controls.Add(this.panel15);
@@ -620,7 +624,6 @@
             this.panel14.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -666,6 +669,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
     }
 }

@@ -24,10 +24,17 @@ namespace QuanLyKhachSan
             if(chucvu!="Quản lý")
             {
                 btqlynhanvien.Enabled = false;
+                btdoanhthu.Enabled = false;
+                btdoanhthu.Cursor = Cursors.Default;
+                btqlynhanvien.Cursor = Cursors.Default;
             }
             else
             {
                 btqlynhanvien.Enabled = true;
+                btdoanhthu.Enabled = true;
+                btdoanhthu.Cursor = Cursors.Hand;
+                btqlynhanvien.Cursor = Cursors.Hand;
+                
             }
         }
         private void close_Hover(object sender, EventArgs e)

@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btqlnhanvien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btqlynhanvien = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btdoanhthu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.line2 = new DevComponents.DotNetBar.Controls.Line();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -76,7 +76,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
             this.panel1.Controls.Add(this.btqlnhanvien);
             this.panel1.Controls.Add(this.btqlynhanvien);
-            this.panel1.Controls.Add(this.bunifuFlatButton6);
+            this.panel1.Controls.Add(this.btdoanhthu);
             this.panel1.Controls.Add(this.bunifuFlatButton5);
             this.panel1.Controls.Add(this.line2);
             this.panel1.Controls.Add(this.panel3);
@@ -159,40 +159,40 @@
             this.btqlynhanvien.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btqlynhanvien.Click += new System.EventHandler(this.btqlnhanvien_Click);
             // 
-            // bunifuFlatButton6
+            // btdoanhthu
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "    Doanh thu";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 40;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = true;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = true;
-            this.bunifuFlatButton6.IconZoom = 40D;
-            this.bunifuFlatButton6.IsTab = true;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 391);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(240, 48);
-            this.bunifuFlatButton6.TabIndex = 9;
-            this.bunifuFlatButton6.Text = "    Doanh thu";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton6.Click += new System.EventHandler(this.btdoanhthu_Click);
+            this.btdoanhthu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
+            this.btdoanhthu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.btdoanhthu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btdoanhthu.BorderRadius = 0;
+            this.btdoanhthu.ButtonText = "    Doanh thu";
+            this.btdoanhthu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btdoanhthu.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(79)))), ((int)(((byte)(86)))));
+            this.btdoanhthu.Iconcolor = System.Drawing.Color.Transparent;
+            this.btdoanhthu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btdoanhthu.Iconimage")));
+            this.btdoanhthu.Iconimage_right = null;
+            this.btdoanhthu.Iconimage_right_Selected = null;
+            this.btdoanhthu.Iconimage_Selected = null;
+            this.btdoanhthu.IconMarginLeft = 40;
+            this.btdoanhthu.IconMarginRight = 0;
+            this.btdoanhthu.IconRightVisible = true;
+            this.btdoanhthu.IconRightZoom = 0D;
+            this.btdoanhthu.IconVisible = true;
+            this.btdoanhthu.IconZoom = 40D;
+            this.btdoanhthu.IsTab = true;
+            this.btdoanhthu.Location = new System.Drawing.Point(0, 391);
+            this.btdoanhthu.Name = "btdoanhthu";
+            this.btdoanhthu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.btdoanhthu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
+            this.btdoanhthu.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
+            this.btdoanhthu.selected = false;
+            this.btdoanhthu.Size = new System.Drawing.Size(240, 48);
+            this.btdoanhthu.TabIndex = 9;
+            this.btdoanhthu.Text = "    Doanh thu";
+            this.btdoanhthu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdoanhthu.Textcolor = System.Drawing.Color.White;
+            this.btdoanhthu.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdoanhthu.Click += new System.EventHandler(this.btdoanhthu_Click);
             // 
             // bunifuFlatButton5
             // 
@@ -272,9 +272,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(102, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 18);
+            this.label6.Size = new System.Drawing.Size(113, 18);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Phòng đã đặt cọc";
+            this.label6.Text = "Phòng đã đặt trước";
             // 
             // label4
             // 
@@ -598,7 +598,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btqlnhanvien;
         private DevComponents.DotNetBar.Controls.Line line2;
         private System.Windows.Forms.Panel panel9;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
+        private Bunifu.Framework.UI.BunifuFlatButton btdoanhthu;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label label8;

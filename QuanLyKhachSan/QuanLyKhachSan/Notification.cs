@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class LoginForm : Form
+    public partial class Notification : Form
     {
-        public LoginForm()
+        public Notification(string a,string b)
         {
             InitializeComponent();
-            
+            label.Text = a;
+            label1.Text = b;
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -51,8 +52,8 @@ namespace QuanLyKhachSan
 
         private void close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            
+            this.Close();
+
         }
 
         private void mini_Click(object sender, EventArgs e)
@@ -60,28 +61,9 @@ namespace QuanLyKhachSan
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btlogin_Click(object sender, EventArgs e)
+        private void btdongy_Click(object sender, EventArgs e)
         {
-            Connection cn = new Connection();
-            string username = tbuser.Text.ToString();
-            string password = tbpass.Text.ToString();
-            string hoten = null;
-            string chucvu = "Chưa có dữ liệu";
-            string avatar = "../img/avatar1.jpg";
-            if((cn.login(username.ToUpper(),"select MANHANVIEN FROM NHANVIEN", 0))==true && (cn.login(password, "select PASS FROM NHANVIEN", 0)) == true)
-            {
-                hoten = cn.LayBien("select HOTEN FROM NHANVIEN where MANHANVIEN='"+username +"'", 0);
-                chucvu = cn.LayBien("select CHUCVU FROM NHANVIEN where MANHANVIEN='" + username + "'", 0);
-                avatar = cn.LayBien("select AVATAR FROM NHANVIEN where MANHANVIEN='" + username + "'", 0);
-                MainForm mf = new MainForm(hoten,chucvu,avatar);
-                this.Hide();
-                mf.Show();
-            }
-            else
-            {
-                Notification nf = new Notification("ĐĂNG NHẬP","Mật khẩu và tài khoản không hợp lệ.");
-                nf.Show();
-            }
+            this.Hide();
         }
     }
 }

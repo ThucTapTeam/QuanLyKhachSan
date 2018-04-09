@@ -12,12 +12,15 @@ namespace QuanLyKhachSan
 {
     public partial class FormDatPhong : Form
     {
-        public FormDatPhong(string sophong,string tangso)
+        public FormDatPhong(string sophong, string tangso)
         {
+            
             InitializeComponent();
             label2.Text = sophong;
             label8.Text = "Tầng " + tangso;
+
         }
+        ChuanHoa ch = new ChuanHoa();
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
         {
@@ -60,5 +63,50 @@ namespace QuanLyKhachSan
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void bthuy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+        string day, month, year,ngaydat;
+        string day1,month1, year1,ngaytra;
+        private void dpngaytra_Change(object sender, EventArgs e)
+        {
+            ngaytra= DPNgayTra.Value.ToString();
+            ch.ChuanHoaDate(ngaytra, out day1, out month1, out year1);
+        }
+
+        private void dpdatphong_Change(object sender, EventArgs e)
+        {
+            ngaydat = DPNgayDat.Value.ToString();
+            ch.ChuanHoaDate(ngaydat, out day, out month, out year);
+        }
+        private void btdatphong_Click(object sender, EventArgs e)
+        {
+            ngaytra = DPNgayTra.Value.ToString();
+            ch.ChuanHoaDate(ngaytra, out day1, out month1, out year1);
+            ngaydat = DPNgayDat.Value.ToString();
+            ch.ChuanHoaDate(ngaydat, out day, out month, out year);
+            Connection cn = new Connection();                     
+            if (ch.CheckTB(tbhoten.Text, tbsocmt.Text, tbphone.Text)==false)
+            {
+                Notification nf = new Notification("LỖI", "Thông tin phải được nhập đầy đủ.");
+                nf.Show();
+            }
+            else if(ch.CheckDate(Int32.Parse(day), Int32.Parse(month), Int32.Parse(year), Int32.Parse(day1), Int32.Parse(month1), Int32.Parse(year1))==false)
+            {
+                Notification nf = new Notification("LỖI", "Ngày đặt phòng và ngày trả phòng không hợp lệ.");
+                nf.Show();
+            }
+            else
+            {
+                
+                Notification nf = new Notification("ĐẶT PHÒNG", "Đặt phòng thành công.");
+                nf.Show();
+                this.Hide();
+            }
+        }
+        
+        
     }
 }

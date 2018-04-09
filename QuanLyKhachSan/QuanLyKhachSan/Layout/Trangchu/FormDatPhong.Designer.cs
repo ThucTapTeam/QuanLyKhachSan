@@ -34,24 +34,26 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbhoten = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbsocmt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbphone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.DPNgayTra = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label8 = new System.Windows.Forms.Label();
+            this.DPNgayDat = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -112,6 +114,18 @@
             this.panel1.Size = new System.Drawing.Size(721, 50);
             this.panel1.TabIndex = 6;
             // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Quicksand Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(569, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 40);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "a";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -134,33 +148,19 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Họ tên khách hàng";
             // 
-            // textBoxX1
+            // tbhoten
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(315, 82);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(272, 29);
-            this.textBoxX1.TabIndex = 8;
-            // 
-            // textBoxX2
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(315, 128);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(272, 29);
-            this.textBoxX2.TabIndex = 10;
+            this.tbhoten.Border.Class = "TextBoxBorder";
+            this.tbhoten.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbhoten.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbhoten.Location = new System.Drawing.Point(315, 82);
+            this.tbhoten.Name = "tbhoten";
+            this.tbhoten.PreventEnterBeep = true;
+            this.tbhoten.Size = new System.Drawing.Size(272, 29);
+            this.tbhoten.TabIndex = 8;
             // 
             // label3
             // 
@@ -172,19 +172,19 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Giới tính";
             // 
-            // textBoxX3
+            // tbsocmt
             // 
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.Location = new System.Drawing.Point(315, 175);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(272, 29);
-            this.textBoxX3.TabIndex = 12;
+            this.tbsocmt.Border.Class = "TextBoxBorder";
+            this.tbsocmt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbsocmt.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbsocmt.Location = new System.Drawing.Point(315, 175);
+            this.tbsocmt.Name = "tbsocmt";
+            this.tbsocmt.PreventEnterBeep = true;
+            this.tbsocmt.Size = new System.Drawing.Size(272, 29);
+            this.tbsocmt.TabIndex = 12;
             // 
             // label4
             // 
@@ -196,19 +196,19 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Số CMT";
             // 
-            // textBoxX4
+            // tbphone
             // 
             // 
             // 
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(315, 224);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.Size = new System.Drawing.Size(272, 29);
-            this.textBoxX4.TabIndex = 14;
+            this.tbphone.Border.Class = "TextBoxBorder";
+            this.tbphone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbphone.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbphone.Location = new System.Drawing.Point(315, 224);
+            this.tbphone.Name = "tbphone";
+            this.tbphone.PreventEnterBeep = true;
+            this.tbphone.Size = new System.Drawing.Size(272, 29);
+            this.tbphone.TabIndex = 14;
             // 
             // label5
             // 
@@ -240,18 +240,19 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Ngày trả phòng";
             // 
-            // bunifuDatepicker2
+            // DPNgayTra
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDatepicker2.BorderRadius = 5;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.bunifuDatepicker2.FormatCustom = "dd/MM/yyyy";
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(315, 324);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(272, 36);
-            this.bunifuDatepicker2.TabIndex = 18;
-            this.bunifuDatepicker2.Value = new System.DateTime(2018, 4, 8, 23, 54, 50, 602);
+            this.DPNgayTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.DPNgayTra.BorderRadius = 5;
+            this.DPNgayTra.ForeColor = System.Drawing.Color.White;
+            this.DPNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DPNgayTra.FormatCustom = "dd/MM/yyyy";
+            this.DPNgayTra.Location = new System.Drawing.Point(315, 324);
+            this.DPNgayTra.Name = "DPNgayTra";
+            this.DPNgayTra.Size = new System.Drawing.Size(272, 36);
+            this.DPNgayTra.TabIndex = 18;
+            this.DPNgayTra.Value = new System.DateTime(2018, 4, 9, 0, 0, 0, 0);
+            this.DPNgayTra.onValueChanged += new System.EventHandler(this.dpngaytra_Change);
             // 
             // bunifuFlatButton1
             // 
@@ -286,6 +287,7 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.btdatphong_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -320,6 +322,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bthuy_Click);
             // 
             // bunifuDragControl2
             // 
@@ -328,30 +331,53 @@
             this.bunifuDragControl2.TargetControl = this.label2;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // bunifuDatepicker1
+            // DPNgayDat
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDatepicker1.BorderRadius = 5;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.bunifuDatepicker1.FormatCustom = "dd/MM/yyyy";
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(315, 271);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(272, 36);
-            this.bunifuDatepicker1.TabIndex = 21;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 4, 8, 23, 54, 50, 602);
+            this.DPNgayDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.DPNgayDat.BorderRadius = 5;
+            this.DPNgayDat.ForeColor = System.Drawing.Color.White;
+            this.DPNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DPNgayDat.FormatCustom = "dd/MM/yyyy";
+            this.DPNgayDat.Location = new System.Drawing.Point(315, 271);
+            this.DPNgayDat.Name = "DPNgayDat";
+            this.DPNgayDat.Size = new System.Drawing.Size(272, 36);
+            this.DPNgayDat.TabIndex = 21;
+            this.DPNgayDat.Value = new System.DateTime(2018, 4, 8, 0, 0, 0, 0);
+            this.DPNgayDat.onValueChanged += new System.EventHandler(this.dpdatphong_Change);
             // 
-            // label8
+            // label9
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Quicksand Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(569, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(152, 40);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "a";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(310, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 26);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Nữ";
+            // 
+            // bunifuiOSSwitch1
+            // 
+            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
+            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(381, 136);
+            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
+            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
+            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(202)))), ((int)(((byte)(94)))));
+            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(35, 20);
+            this.bunifuiOSSwitch1.TabIndex = 23;
+            this.bunifuiOSSwitch1.Value = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(438, 130);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 26);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Nam";
             // 
             // FormDatPhong
             // 
@@ -359,19 +385,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(721, 440);
-            this.Controls.Add(this.bunifuDatepicker1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.bunifuiOSSwitch1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.DPNgayDat);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.bunifuDatepicker2);
+            this.Controls.Add(this.DPNgayTra);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxX4);
+            this.Controls.Add(this.tbphone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxX3);
+            this.Controls.Add(this.tbsocmt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxX2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.tbhoten);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -395,20 +423,22 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbhoten;
         private System.Windows.Forms.Label label3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbsocmt;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private Bunifu.Framework.UI.BunifuDatepicker DPNgayTra;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbphone;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuDatepicker DPNgayDat;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
+        private System.Windows.Forms.Label label9;
     }
 }

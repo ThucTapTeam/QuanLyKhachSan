@@ -140,20 +140,21 @@ namespace QuanLyKhachSan.Layout
             tenphong5 = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
             if (tenphong2!=null)
             {
-                label16.Text = "phong dang o";
+                //label16.Text = "phong dang o";
             }
             if(tenphong3!=null)
             {
                 FormDatPhong dp = new FormDatPhong(tenphong3,temp.ToString());
+                //FormDatPhong dp = new FormDatPhong();
                 dp.Show();
             }
             if(tenphong4!=null)
             {
-                label16.Text = "phong dang tra muon";
+                //label16.Text = "phong dang tra muon";
             }
             if(tenphong5!=null)
             {
-                label16.Text = "phong dang dat coc";
+               // label16.Text = "phong dang dat coc";
             }
            
         }
