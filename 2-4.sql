@@ -29,7 +29,7 @@ CREATE TABLE KHACHHANG(
 	MAKHACHHANG VARCHAR(8) PRIMARY KEY,
 	TENKHACHHANG NVARCHAR(50),
 	GIOITINH NVARCHAR(6) CHECK(GIOITINH=N'Nam' or GIOITINH=N'Nữ'),
-	DIACHI NVARCHAR(30),
+	SOCMT VARCHAR(13),
 	SODIENTHOAIKH VARCHAR(12),
 )
 
@@ -91,3 +91,4 @@ delete from nhanvien where MANHANVIEN='NV0001'
 select * from khachhang
 select * from thuephong
 delete from thuephong where maphong in (select maphong from phong where tenphong= 'Phòng 202')
+select makhachhang from khachhang order by makhachhang desc
