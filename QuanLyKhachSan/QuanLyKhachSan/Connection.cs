@@ -81,5 +81,12 @@ namespace QuanLyKhachSan
             ngatketnoi();
             return temp;
         }
+        public void InsertDeleteUpdate(string strsql,byte cot)
+        {
+            ketnoi();
+            sqlcom = new SqlCommand(strsql, sqlconn);
+            sqldatar = sqlcom.ExecuteReader();
+            ngatketnoi();
+        }
     }
 }

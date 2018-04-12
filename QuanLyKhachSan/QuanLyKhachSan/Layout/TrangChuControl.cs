@@ -127,9 +127,10 @@ namespace QuanLyKhachSan.Layout
                 pn[i].Cursor = Cursors.Default;
             }
         }
+        public string laytenphong=null;
         private void Tang(int temp,int a)
         {
-            string tenphong2 =null;
+            string tenphong2 = null;
             string tenphong3 = null;
             string tenphong4 = null;
             string tenphong5 = null;
@@ -140,10 +141,16 @@ namespace QuanLyKhachSan.Layout
             tenphong5 = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
             if (tenphong2!=null)
             {
+                btdattraphong.Text = "Trả Phòng";
+                btdattraphong.Cursor = Cursors.Hand;
                 //label16.Text = "phong dang o";
+                laytenphong = tenphong2;
+                tang = temp;
             }
             if(tenphong3!=null)
             {
+                btdattraphong.Text = "Đặt Phòng";
+                btdattraphong.Cursor = Cursors.Default;
                 FormDatPhong dp = new FormDatPhong(tenphong3,temp.ToString());
                 //FormDatPhong dp = new FormDatPhong();
                 dp.Show();
@@ -151,10 +158,18 @@ namespace QuanLyKhachSan.Layout
             if(tenphong4!=null)
             {
                 //label16.Text = "phong dang tra muon";
+                btdattraphong.Text = "Trả Phòng";
+                btdattraphong.Cursor = Cursors.Hand;
+                laytenphong = tenphong4;
+               tang = temp;
             }
             if(tenphong5!=null)
             {
-               // label16.Text = "phong dang dat coc";
+                // label16.Text = "phong dang dat coc";
+                btdattraphong.Text = "Trả Phòng";
+                btdattraphong.Cursor = Cursors.Hand;
+                laytenphong = tenphong5;
+                tang = temp;
             }
            
         }
@@ -244,6 +259,13 @@ namespace QuanLyKhachSan.Layout
         private void lb15(object sender, EventArgs e)
         {
             EventKTTang(15);
+        }
+
+        private void btdattraphong_Click(object sender, EventArgs e)
+        {
+            conn.InsertDeleteUpdate("delete from thuephong where maphong in (select maphong from phong where tenphong= '" + laytenphong + "')", 0);
+            Phong(tang);
+            RoomColor(tang);
         }
     }
 }

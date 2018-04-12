@@ -61,7 +61,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.DDTang = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btdattraphong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -433,39 +433,40 @@
             this.DDTang.TabIndex = 25;
             this.DDTang.onItemSelected += new System.EventHandler(this.DDTang_Select);
             // 
-            // bunifuFlatButton1
+            // btdattraphong
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Đặt phòng";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, -1);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(160, 40);
-            this.bunifuFlatButton1.TabIndex = 0;
-            this.bunifuFlatButton1.Text = "Đặt phòng";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdattraphong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.btdattraphong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.btdattraphong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btdattraphong.BorderRadius = 0;
+            this.btdattraphong.ButtonText = "Đặt phòng";
+            this.btdattraphong.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btdattraphong.DisabledColor = System.Drawing.Color.Gray;
+            this.btdattraphong.Iconcolor = System.Drawing.Color.Transparent;
+            this.btdattraphong.Iconimage = null;
+            this.btdattraphong.Iconimage_right = null;
+            this.btdattraphong.Iconimage_right_Selected = null;
+            this.btdattraphong.Iconimage_Selected = null;
+            this.btdattraphong.IconMarginLeft = 0;
+            this.btdattraphong.IconMarginRight = 0;
+            this.btdattraphong.IconRightVisible = true;
+            this.btdattraphong.IconRightZoom = 0D;
+            this.btdattraphong.IconVisible = true;
+            this.btdattraphong.IconZoom = 90D;
+            this.btdattraphong.IsTab = false;
+            this.btdattraphong.Location = new System.Drawing.Point(0, -1);
+            this.btdattraphong.Name = "btdattraphong";
+            this.btdattraphong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.btdattraphong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.btdattraphong.OnHoverTextColor = System.Drawing.Color.White;
+            this.btdattraphong.selected = false;
+            this.btdattraphong.Size = new System.Drawing.Size(160, 40);
+            this.btdattraphong.TabIndex = 0;
+            this.btdattraphong.Text = "Đặt phòng";
+            this.btdattraphong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btdattraphong.Textcolor = System.Drawing.Color.White;
+            this.btdattraphong.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdattraphong.Click += new System.EventHandler(this.btdattraphong_Click);
             // 
             // panel11
             // 
@@ -587,7 +588,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btdattraphong);
             this.Controls.Add(this.bunifuCustomDataGrid1);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel10);
@@ -649,7 +650,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btdattraphong;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
