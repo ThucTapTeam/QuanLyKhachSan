@@ -81,7 +81,7 @@ namespace QuanLyKhachSan
             ngatketnoi();
             return temp;
         }
-        public void InsertDeleteUpdate(string strsql,byte cot)
+        public void InsertDeleteUpdate(string strsql)
         {
             ketnoi();
             sqlcom = new SqlCommand(strsql, sqlconn);

@@ -263,7 +263,7 @@ namespace QuanLyKhachSan.Layout
 
         private void btdattraphong_Click(object sender, EventArgs e)
         {
-            conn.InsertDeleteUpdate("delete from thuephong where maphong in (select maphong from phong where tenphong= '" + laytenphong + "')", 0);
+            conn.InsertDeleteUpdate("delete from thuephong where maphong in (select maphong from phong where tenphong= '" + laytenphong + "')");
             Phong(tang);
             RoomColor(tang);
         }

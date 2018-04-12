@@ -51,9 +51,7 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.DPNgayDat = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
-            this.label10 = new System.Windows.Forms.Label();
+            this.ddGioiTinh = new Bunifu.Framework.UI.BunifuDropdown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -345,39 +343,22 @@
             this.DPNgayDat.Value = new System.DateTime(2018, 4, 8, 0, 0, 0, 0);
             this.DPNgayDat.onValueChanged += new System.EventHandler(this.dpdatphong_Change);
             // 
-            // label9
+            // ddGioiTinh
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(310, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 26);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Nữ";
-            // 
-            // bunifuiOSSwitch1
-            // 
-            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
-            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(381, 136);
-            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
-            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
-            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(202)))), ((int)(((byte)(94)))));
-            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(35, 20);
-            this.bunifuiOSSwitch1.TabIndex = 23;
-            this.bunifuiOSSwitch1.Value = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(438, 130);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 26);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Nam";
+            this.ddGioiTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddGioiTinh.BorderRadius = 3;
+            this.ddGioiTinh.DisabledColor = System.Drawing.Color.Gray;
+            this.ddGioiTinh.ForeColor = System.Drawing.Color.White;
+            this.ddGioiTinh.Items = new string[] {
+        "Nam",
+        "Nữ"};
+            this.ddGioiTinh.Location = new System.Drawing.Point(315, 121);
+            this.ddGioiTinh.Name = "ddGioiTinh";
+            this.ddGioiTinh.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddGioiTinh.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.ddGioiTinh.selectedIndex = 0;
+            this.ddGioiTinh.Size = new System.Drawing.Size(272, 35);
+            this.ddGioiTinh.TabIndex = 22;
             // 
             // FormDatPhong
             // 
@@ -385,9 +366,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(721, 440);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.bunifuiOSSwitch1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.ddGioiTinh);
             this.Controls.Add(this.DPNgayDat);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
@@ -437,8 +416,6 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private Bunifu.Framework.UI.BunifuDatepicker DPNgayDat;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
-        private System.Windows.Forms.Label label9;
+        private Bunifu.Framework.UI.BunifuDropdown ddGioiTinh;
     }
 }
