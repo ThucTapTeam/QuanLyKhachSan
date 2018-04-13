@@ -62,18 +62,19 @@ namespace QuanLyKhachSan
 
         private void btlogin_Click(object sender, EventArgs e)
         {
+            HotelObject.NhanVienFo nv =new HotelObject.NhanVienFo();
             Connection cn = new Connection();
-            string username = tbuser.Text.ToString();
-            string password = tbpass.Text.ToString();
-            string hoten = null;
-            string chucvu = "Chưa có dữ liệu";
-            string avatar = "../img/avatar1.jpg";
-            if((cn.login(username.ToUpper(),"select MANHANVIEN FROM NHANVIEN", 0))==true && (cn.login(password, "select PASS FROM NHANVIEN", 0)) == true)
+            nv.MaNhanVien = tbuser.Text.ToString();
+            nv.MatKhau = tbpass.Text.ToString();
+            nv.HoTen = null;
+            nv.ChucVu = "Chưa có dữ liệu";
+            nv.Avatar = "../img/avatar1.jpg";
+            if((cn.login(nv.MaNhanVien.ToUpper(),"select MANHANVIEN FROM NHANVIEN", 0))==true && (cn.login(nv.MatKhau, "select PASS FROM NHANVIEN", 0)) == true)
             {
-                hoten = cn.LayBien("select HOTEN FROM NHANVIEN where MANHANVIEN='"+username +"'", 0);
-                chucvu = cn.LayBien("select CHUCVU FROM NHANVIEN where MANHANVIEN='" + username + "'", 0);
-                avatar = cn.LayBien("select AVATAR FROM NHANVIEN where MANHANVIEN='" + username + "'", 0);
-                MainForm mf = new MainForm(hoten,chucvu,avatar);
+                nv.HoTen = cn.LayBien("select HOTEN FROM NHANVIEN where MANHANVIEN='"+ nv.MaNhanVien + "'", 0);
+                nv.ChucVu = cn.LayBien("select CHUCVU FROM NHANVIEN where MANHANVIEN='" + nv.MaNhanVien + "'", 0);
+                nv.Avatar = cn.LayBien("select AVATAR FROM NHANVIEN where MANHANVIEN='" + nv.MaNhanVien + "'", 0);
+                MainForm mf = new MainForm(nv.HoTen, nv.ChucVu, nv.Avatar);
                 this.Hide();
                 mf.Show();
             }

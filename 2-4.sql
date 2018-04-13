@@ -86,8 +86,10 @@ select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date
 INSERT INTO NHANVIEN VALUES('NV0001','112233',N'Lê Văn A',N'Lễ Tân','Nam','../img/2.jpg','19970514','0967123456')
 INSERT INTO NHANVIEN VALUES('ADMIN','123456',N'Trương Quang Hải',N'Quản lý','Nam','../img/1.png','19970214','0967125182')
 select * from nhanvien
-delete from nhanvien where MANHANVIEN='NV0001'
-
+select * from thuephong where mathue='TP12346'
+delete from thuephong where mathue='TP12346'
+select mathue from thuephong order by mathue desc
+select makhachhang from khachhang order by makhachhang asc
 select * from khachhang
 select * from thuephong
 delete from thuephong where maphong in (select maphong from phong where tenphong= 'Phòng 202')

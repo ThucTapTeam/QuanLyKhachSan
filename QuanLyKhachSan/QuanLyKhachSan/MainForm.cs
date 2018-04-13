@@ -12,7 +12,6 @@ namespace QuanLyKhachSan
 {
     public partial class MainForm : Form
     {
-
         public MainForm(string hoten, string chucvu, string avatar)
         {
             InitializeComponent();

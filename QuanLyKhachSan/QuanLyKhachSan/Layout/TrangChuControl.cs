@@ -12,7 +12,7 @@ namespace QuanLyKhachSan.Layout
 {
     public partial class TrangChuControl : UserControl
     {
-        int tang;
+        
         public TrangChuControl()
         {
             InitializeComponent();
@@ -20,8 +20,68 @@ namespace QuanLyKhachSan.Layout
             RoomColor(2);
             tang = 2;
         }
+        private void lb1(object sender, EventArgs e)
+        {
+            EventKTTang(1);
+        }
+        private void lb2(object sender, EventArgs e)
+        {
+            EventKTTang(2);
+        }
+        private void lb3(object sender, EventArgs e)
+        {
+            EventKTTang(3);
+        }
+        private void lb4(object sender, EventArgs e)
+        {
+            EventKTTang(4);
+        }
+        private void lb5(object sender, EventArgs e)
+        {
+            EventKTTang(5);
+        }
+        private void lb6(object sender, EventArgs e)
+        {
+            EventKTTang(6);
+        }
+        private void lb7(object sender, EventArgs e)
+        {
+            EventKTTang(7);
+        }
+        private void lb8(object sender, EventArgs e)
+        {
+            EventKTTang(8);
+        }
+        private void lb9(object sender, EventArgs e)
+        {
+            EventKTTang(9);
+        }
+        private void lb10(object sender, EventArgs e)
+        {
+            EventKTTang(10);
+        }
+        private void lb11(object sender, EventArgs e)
+        {
+            EventKTTang(11);
+        }
+        private void lb12(object sender, EventArgs e)
+        {
+            EventKTTang(12);
+        }
+        private void lb13(object sender, EventArgs e)
+        {
+            EventKTTang(13);
+        }
+        private void lb14(object sender, EventArgs e)
+        {
+            EventKTTang(14);
+        }
+        private void lb15(object sender, EventArgs e)
+        {
+            EventKTTang(15);
+        }
         string sophong;
-        
+        int tang;
         Connection conn = new Connection();
         public string tenphongthue = null;
         public int[] CheckPhong(string[] temp,string strsql,int tongsophong,int sotang,out int j)
@@ -101,9 +161,9 @@ namespace QuanLyKhachSan.Layout
             pn[12] = this.panel13;
             pn[13] = this.panel14;
             pn[14] = this.panel15;
-            phongso=CheckPhong(tenphong1, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG=" + tangso + "order by tenphong", Int32.Parse(sophong), tangso,out sophongdangthue);
-            phongtramuon = CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + tangso + " order by tenphong", Int32.Parse(sophong), tangso, out sophongtramuon);
-            phongdattruoc=CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) AND PHONG.SOTANG="+tangso+" order by tenphong", Int32.Parse(sophong), tangso, out sophongdattruoc);
+            phongso=CheckPhong(tenphong1, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and THUEPHONG.TRANGTHAI=1 and PHONG.SOTANG=" + tangso + "order by tenphong", Int32.Parse(sophong), tangso,out sophongdangthue);
+            phongtramuon = CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1  AND PHONG.SOTANG=" + tangso + " order by tenphong", Int32.Parse(sophong), tangso, out sophongtramuon);
+            phongdattruoc=CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1 AND PHONG.SOTANG=" + tangso+" order by tenphong", Int32.Parse(sophong), tangso, out sophongdattruoc);
             for (int i=0;i< Int32.Parse(sophong);i++)
             {
                 pn[i].BackColor = Color.FromArgb(149, 165, 166) ;
@@ -130,45 +190,51 @@ namespace QuanLyKhachSan.Layout
         public string laytenphong=null;
         private void Tang(int temp,int a)
         {
-            string tenphong2 = null;
-            string tenphong3 = null;
-            string tenphong4 = null;
-            string tenphong5 = null;
+            HotelObject.PhongFo p = new HotelObject.PhongFo();
+            HotelObject.PhongFo p1 = new HotelObject.PhongFo();
+            HotelObject.PhongFo p2 = new HotelObject.PhongFo();
+            HotelObject.PhongFo p3 = new HotelObject.PhongFo();
+            p.TenPhong = null;
+            p1.TenPhong = null;
+            p2.TenPhong = null;
+            p3.TenPhong = null;
             string ghepmaphong = "P"+temp.ToString() + "0" + a.ToString();
-            tenphong2=conn.LayBien( "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and PHONG.SOTANG="+temp+" and phong.MAPHONG='"+ghepmaphong+"'", 0);
-            tenphong3=conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG  WHERE THUEPHONG.MAPHONG is null and PHONG.SOTANG="+temp+ " and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            tenphong4 = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + temp + "  and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            tenphong5 = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) AND PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            if (tenphong2!=null)
+            p.TenPhong = conn.LayBien("select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and THUEPHONG.TRANGTHAI=1 and PHONG.SOTANG=" + temp+" and phong.MAPHONG='"+ghepmaphong+"'", 0);
+            p1.TenPhong = conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG  WHERE THUEPHONG.MAPHONG is null and THUEPHONG.TRANGTHAI=1 and PHONG.SOTANG=" + temp+ " and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            p2.TenPhong = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1  AND PHONG.SOTANG=" + temp + "  and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            p3.TenPhong = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1 AND PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            if (p.TenPhong != null)
             {
                 btdattraphong.Text = "Trả Phòng";
                 btdattraphong.Cursor = Cursors.Hand;
                 //label16.Text = "phong dang o";
-                laytenphong = tenphong2;
+                laytenphong = p.TenPhong;
                 tang = temp;
             }
-            if(tenphong3!=null)
+            if(p1.TenPhong != null)
             {
                 btdattraphong.Text = "Đặt Phòng";
                 btdattraphong.Cursor = Cursors.Default;
-                FormDatPhong dp = new FormDatPhong(tenphong3,temp.ToString());
+                FormDatPhong dp = new FormDatPhong(p1.TenPhong, temp.ToString());
                 //FormDatPhong dp = new FormDatPhong();
                 dp.Show();
+                
+                
             }
-            if(tenphong4!=null)
+            if(p2.TenPhong != null)
             {
                 //label16.Text = "phong dang tra muon";
                 btdattraphong.Text = "Trả Phòng";
                 btdattraphong.Cursor = Cursors.Hand;
-                laytenphong = tenphong4;
-               tang = temp;
+                laytenphong = p2.TenPhong;
+                tang = temp;
             }
-            if(tenphong5!=null)
+            if(p3.TenPhong != null)
             {
                 // label16.Text = "phong dang dat coc";
                 btdattraphong.Text = "Trả Phòng";
                 btdattraphong.Cursor = Cursors.Hand;
-                laytenphong = tenphong5;
+                laytenphong = p3.TenPhong;
                 tang = temp;
             }
            
@@ -200,70 +266,10 @@ namespace QuanLyKhachSan.Layout
             }
         }
 
-        private void lb1(object sender, EventArgs e)
-        {
-            EventKTTang(1);
-        }
-        private void lb2(object sender, EventArgs e)
-        {
-            EventKTTang(2);
-        }
-        private void lb3(object sender, EventArgs e)
-        {
-            EventKTTang(3);
-        }
-        private void lb4(object sender, EventArgs e)
-        {
-            EventKTTang(4);
-        }
-        private void lb5(object sender, EventArgs e)
-        {
-            EventKTTang(5);
-        }
-        private void lb6(object sender, EventArgs e)
-        {
-            EventKTTang(6);
-        }
-        private void lb7(object sender, EventArgs e)
-        {
-            EventKTTang(7);
-        }
-        private void lb8(object sender, EventArgs e)
-        {
-            EventKTTang(8);
-        }
-        private void lb9(object sender, EventArgs e)
-        {
-            EventKTTang(9);
-        }
-        private void lb10(object sender, EventArgs e)
-        {
-            EventKTTang(10);
-        }
-        private void lb11(object sender, EventArgs e)
-        {
-            EventKTTang(11);
-        }
-        private void lb12(object sender, EventArgs e)
-        {
-            EventKTTang(12);
-        }
-        private void lb13(object sender, EventArgs e)
-        {
-            EventKTTang(13);
-        }
-        private void lb14(object sender, EventArgs e)
-        {
-            EventKTTang(14);
-        }
-        private void lb15(object sender, EventArgs e)
-        {
-            EventKTTang(15);
-        }
 
         private void btdattraphong_Click(object sender, EventArgs e)
         {
-            conn.InsertDeleteUpdate("delete from thuephong where maphong in (select maphong from phong where tenphong= '" + laytenphong + "')");
+            conn.InsertDeleteUpdate("UPDATE THUEPHONG SET TRANGTHAI=0 WHERE MAPHONG IN (SELECT MAPHONG FROM PHONG WHERE TENPHONG='"+ laytenphong + "')");
             Phong(tang);
             RoomColor(tang);
         }

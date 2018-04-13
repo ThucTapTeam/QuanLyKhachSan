@@ -52,10 +52,13 @@
   <ItemGroup>
     <Compile Include="ChuanHoa.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="Layout\Trangchu\FormDatPhong.cs">
+    <Compile Include="HotelObject\KhachHangFo.cs" />
+    <Compile Include="HotelObject\NhanVienFo.cs" />
+    <Compile Include="HotelObject\PhongFo.cs" />
+    <Compile Include="Layout\SubLayout\FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\Trangchu\FormDatPhong.Designer.cs">
+    <Compile Include="Layout\SubLayout\FormDatPhong.Designer.cs">
       <DependentUpon>FormDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\DoanhThuControl.cs">
@@ -75,6 +78,12 @@
     </Compile>
     <Compile Include="Layout\QLNhanVienControl.Designer.cs">
       <DependentUpon>QLNhanVienControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemNV.Designer.cs">
+      <DependentUpon>FormThemNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\TrangChuControl.cs">
       <SubType>UserControl</SubType>
@@ -102,7 +111,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Layout\Trangchu\FormDatPhong.resx">
+    <EmbeddedResource Include="Layout\SubLayout\FormDatPhong.resx">
       <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\DoanhThuControl.resx">
@@ -113,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\QLNhanVienControl.resx">
       <DependentUpon>QLNhanVienControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SubLayout\FormThemNV.resx">
+      <DependentUpon>FormThemNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\TrangChuControl.resx">
       <DependentUpon>TrangChuControl.cs</DependentUpon>
@@ -148,5 +160,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
