@@ -30,30 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemNV));
             this.ddGioiTinh = new Bunifu.Framework.UI.BunifuDropdown();
-            this.DPNgayDat = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.DPNgaySinh = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btdatphong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label6 = new System.Windows.Forms.Label();
             this.tbphone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbsocmt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbpass = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbhoten = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddchucvu = new Bunifu.Framework.UI.BunifuDropdown();
             this.label9 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btavtar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.fileAvatar = new System.Windows.Forms.OpenFileDialog();
+            this.pbavatar = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbavatar)).BeginInit();
             this.SuspendLayout();
             // 
             // ddGioiTinh
@@ -73,18 +75,18 @@
             this.ddGioiTinh.Size = new System.Drawing.Size(272, 35);
             this.ddGioiTinh.TabIndex = 37;
             // 
-            // DPNgayDat
+            // DPNgaySinh
             // 
-            this.DPNgayDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.DPNgayDat.BorderRadius = 5;
-            this.DPNgayDat.ForeColor = System.Drawing.Color.White;
-            this.DPNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DPNgayDat.FormatCustom = "dd/MM/yyyy";
-            this.DPNgayDat.Location = new System.Drawing.Point(315, 277);
-            this.DPNgayDat.Name = "DPNgayDat";
-            this.DPNgayDat.Size = new System.Drawing.Size(272, 36);
-            this.DPNgayDat.TabIndex = 36;
-            this.DPNgayDat.Value = new System.DateTime(2018, 4, 8, 0, 0, 0, 0);
+            this.DPNgaySinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.DPNgaySinh.BorderRadius = 5;
+            this.DPNgaySinh.ForeColor = System.Drawing.Color.White;
+            this.DPNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DPNgaySinh.FormatCustom = "dd/MM/yyyy";
+            this.DPNgaySinh.Location = new System.Drawing.Point(315, 277);
+            this.DPNgaySinh.Name = "DPNgaySinh";
+            this.DPNgaySinh.Size = new System.Drawing.Size(272, 36);
+            this.DPNgaySinh.TabIndex = 36;
+            this.DPNgaySinh.Value = new System.DateTime(2018, 4, 8, 0, 0, 0, 0);
             // 
             // bunifuFlatButton2
             // 
@@ -120,39 +122,40 @@
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton1
+            // btdatphong
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "ĐẶT PHÒNG";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(103, 462);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(206, 48);
-            this.bunifuFlatButton1.TabIndex = 34;
-            this.bunifuFlatButton1.Text = "ĐẶT PHÒNG";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdatphong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
+            this.btdatphong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.btdatphong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btdatphong.BorderRadius = 0;
+            this.btdatphong.ButtonText = "ĐẶT PHÒNG";
+            this.btdatphong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btdatphong.DisabledColor = System.Drawing.Color.Gray;
+            this.btdatphong.Iconcolor = System.Drawing.Color.Transparent;
+            this.btdatphong.Iconimage = null;
+            this.btdatphong.Iconimage_right = null;
+            this.btdatphong.Iconimage_right_Selected = null;
+            this.btdatphong.Iconimage_Selected = null;
+            this.btdatphong.IconMarginLeft = 0;
+            this.btdatphong.IconMarginRight = 0;
+            this.btdatphong.IconRightVisible = true;
+            this.btdatphong.IconRightZoom = 0D;
+            this.btdatphong.IconVisible = true;
+            this.btdatphong.IconZoom = 90D;
+            this.btdatphong.IsTab = false;
+            this.btdatphong.Location = new System.Drawing.Point(103, 462);
+            this.btdatphong.Name = "btdatphong";
+            this.btdatphong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
+            this.btdatphong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
+            this.btdatphong.OnHoverTextColor = System.Drawing.Color.White;
+            this.btdatphong.selected = false;
+            this.btdatphong.Size = new System.Drawing.Size(206, 48);
+            this.btdatphong.TabIndex = 34;
+            this.btdatphong.Text = "ĐẶT PHÒNG";
+            this.btdatphong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btdatphong.Textcolor = System.Drawing.Color.White;
+            this.btdatphong.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdatphong.Click += new System.EventHandler(this.btdatphong_Click);
             // 
             // label6
             // 
@@ -188,19 +191,19 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "Điện thoại";
             // 
-            // tbsocmt
+            // tbpass
             // 
             // 
             // 
             // 
-            this.tbsocmt.Border.Class = "TextBoxBorder";
-            this.tbsocmt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbsocmt.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbsocmt.Location = new System.Drawing.Point(315, 181);
-            this.tbsocmt.Name = "tbsocmt";
-            this.tbsocmt.PreventEnterBeep = true;
-            this.tbsocmt.Size = new System.Drawing.Size(272, 29);
-            this.tbsocmt.TabIndex = 28;
+            this.tbpass.Border.Class = "TextBoxBorder";
+            this.tbpass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbpass.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbpass.Location = new System.Drawing.Point(315, 181);
+            this.tbpass.Name = "tbpass";
+            this.tbpass.PreventEnterBeep = true;
+            this.tbpass.Size = new System.Drawing.Size(272, 29);
+            this.tbpass.TabIndex = 28;
             // 
             // label4
             // 
@@ -249,7 +252,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -258,18 +260,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 50);
             this.panel1.TabIndex = 23;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Quicksand Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(569, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(152, 40);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "a";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -282,6 +272,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.close_Click);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.close_Leave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.close_Hover);
             // 
             // label2
             // 
@@ -292,7 +285,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(259, 40);
             this.label2.TabIndex = 5;
-            this.label2.Text = "a";
+            this.label2.Text = "THÊM NHÂN VIÊN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -306,6 +299,9 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.mini_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.mini_Leave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.mini_Hover);
             // 
             // label7
             // 
@@ -317,22 +313,22 @@
             this.label7.TabIndex = 32;
             this.label7.Text = "Chức vụ";
             // 
-            // bunifuDropdown1
+            // ddchucvu
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[] {
+            this.ddchucvu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddchucvu.BorderRadius = 3;
+            this.ddchucvu.DisabledColor = System.Drawing.Color.Gray;
+            this.ddchucvu.ForeColor = System.Drawing.Color.White;
+            this.ddchucvu.Items = new string[] {
         "Nam",
         "Nữ"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(315, 331);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(272, 35);
-            this.bunifuDropdown1.TabIndex = 38;
+            this.ddchucvu.Location = new System.Drawing.Point(315, 331);
+            this.ddchucvu.Name = "ddchucvu";
+            this.ddchucvu.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddchucvu.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.ddchucvu.selectedIndex = 0;
+            this.ddchucvu.Size = new System.Drawing.Size(272, 35);
+            this.ddchucvu.TabIndex = 38;
             // 
             // label9
             // 
@@ -344,58 +340,79 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Avatar";
             // 
-            // bunifuFlatButton3
+            // btavtar
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Chọn ảnh";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = null;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(315, 385);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(142, 35);
-            this.bunifuFlatButton3.TabIndex = 40;
-            this.bunifuFlatButton3.Text = "Chọn ảnh";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Quicksand Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Click += new System.EventHandler(this.btchonanh_Click);
+            this.btavtar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btavtar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.btavtar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btavtar.BorderRadius = 0;
+            this.btavtar.ButtonText = "Chọn ảnh";
+            this.btavtar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btavtar.DisabledColor = System.Drawing.Color.Gray;
+            this.btavtar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btavtar.Iconimage = null;
+            this.btavtar.Iconimage_right = null;
+            this.btavtar.Iconimage_right_Selected = null;
+            this.btavtar.Iconimage_Selected = null;
+            this.btavtar.IconMarginLeft = 0;
+            this.btavtar.IconMarginRight = 0;
+            this.btavtar.IconRightVisible = true;
+            this.btavtar.IconRightZoom = 0D;
+            this.btavtar.IconVisible = true;
+            this.btavtar.IconZoom = 90D;
+            this.btavtar.IsTab = false;
+            this.btavtar.Location = new System.Drawing.Point(315, 385);
+            this.btavtar.Name = "btavtar";
+            this.btavtar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.btavtar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btavtar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btavtar.selected = false;
+            this.btavtar.Size = new System.Drawing.Size(175, 35);
+            this.btavtar.TabIndex = 40;
+            this.btavtar.Text = "Chọn ảnh";
+            this.btavtar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btavtar.Textcolor = System.Drawing.Color.White;
+            this.btavtar.TextFont = new System.Drawing.Font("Quicksand Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btavtar.Click += new System.EventHandler(this.btchonanh_Click);
+            // 
+            // pbavatar
+            // 
+            this.pbavatar.Image = ((System.Drawing.Image)(resources.GetObject("pbavatar.Image")));
+            this.pbavatar.Location = new System.Drawing.Point(515, 372);
+            this.pbavatar.Name = "pbavatar";
+            this.pbavatar.Size = new System.Drawing.Size(72, 72);
+            this.pbavatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbavatar.TabIndex = 41;
+            this.pbavatar.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Quicksand", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(338, 426);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 26);
+            this.label8.TabIndex = 42;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormThemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 533);
-            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pbavatar);
+            this.Controls.Add(this.btavtar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.ddchucvu);
             this.Controls.Add(this.ddGioiTinh);
-            this.Controls.Add(this.DPNgayDat);
+            this.Controls.Add(this.DPNgaySinh);
             this.Controls.Add(this.bunifuFlatButton2);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btdatphong);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbphone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbsocmt);
+            this.Controls.Add(this.tbpass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbhoten);
@@ -408,6 +425,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbavatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,26 +434,27 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuDropdown ddGioiTinh;
-        private Bunifu.Framework.UI.BunifuDatepicker DPNgayDat;
+        private Bunifu.Framework.UI.BunifuDatepicker DPNgaySinh;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btdatphong;
         private System.Windows.Forms.Label label6;
         private DevComponents.DotNetBar.Controls.TextBoxX tbphone;
         private System.Windows.Forms.Label label5;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbsocmt;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbpass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private DevComponents.DotNetBar.Controls.TextBoxX tbhoten;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown ddchucvu;
         private System.Windows.Forms.Label label9;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton btavtar;
         private System.Windows.Forms.OpenFileDialog fileAvatar;
+        private System.Windows.Forms.PictureBox pbavatar;
+        private System.Windows.Forms.Label label8;
     }
 }

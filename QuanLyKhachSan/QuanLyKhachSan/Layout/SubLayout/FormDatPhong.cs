@@ -115,8 +115,7 @@ namespace QuanLyKhachSan
                 makhachhang = "KH" + (Int32.Parse(temp) + 1).ToString();
                 mathue = "TP" + (Int32.Parse(temp2) + 1).ToString();
                 cn.InsertDeleteUpdate("INSERT INTO KHACHHANG VALUES('"+ makhachhang + "',N'" + tbhoten.Text + "',N'" + ddGioiTinh.selectedValue + "','"+tbsocmt.Text+"','" + tbphone.Text + "')");
-                cn.InsertDeleteUpdate("INSERT INTO THUEPHONG VALUES('" + mathue + "','" + makhachhang + "','" + maphong + "','" + year + month + day + "','" + year1 + month1 + day1 + "')");
-                
+                cn.InsertDeleteUpdate("INSERT INTO THUEPHONG VALUES('" + mathue + "','" + makhachhang + "','" + maphong + "','" + year + month + day + "','" + year1 + month1 + day1 + "',1)");
                 Notification nf = new Notification("ĐẶT PHÒNG", "Đặt phòng thành công.");
                 nf.Show();
                 this.Hide();

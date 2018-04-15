@@ -50,8 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChuanHoa.cs" />
-    <Compile Include="Connection.cs" />
+    <Compile Include="Controller\ChuanHoa.cs" />
+    <Compile Include="Controller\Connection.cs" />
+    <Compile Include="Controller\DatPhongController.cs" />
+    <Compile Include="Controller\ThemNVController.cs" />
+    <Compile Include="Controller\TrangChuController.cs" />
     <Compile Include="HotelObject\KhachHangFo.cs" />
     <Compile Include="HotelObject\NhanVienFo.cs" />
     <Compile Include="HotelObject\PhongFo.cs" />
