@@ -12,11 +12,12 @@ namespace QuanLyKhachSan
 {
     public partial class Notification : Form
     {
-        public Notification(string a,string b)
+        public Notification(string a, string b, string c)
         {
             InitializeComponent();
             label.Text = a;
             label1.Text = b;
+            label2.Text = c;
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams

@@ -27,8 +27,8 @@ namespace QuanLyKhachSan.Controller
                 temp = temp + manv[i];
             }
             manv="NV"+ (Int32.Parse(temp) + 1).ToString();
-            conn.InsertDeleteUpdate("INSERT INTO NHANVIEN VALUES('"+manv+"','"+tbpass+"','"+tbhoten+"','"+ddchucvu.selectedValue+"','"+ddGioiTinh.selectedValue+"','"+btavtar+"','"+year+month+day+"','"+tbphone+"')");
-            Notification nf = new Notification("THÊM NHÂN VIÊN", "Thêm nhân viên thành công.");
+            conn.InsertDeleteUpdate("INSERT INTO NHANVIEN VALUES('"+manv+"','"+tbpass.Text+"',N'"+tbhoten.Text+"',N'"+ddchucvu.selectedValue+"',N'"+ddGioiTinh.selectedValue+"','"+btavtar+"','"+year+month+day+"','"+tbphone.Text+"')");
+            Notification nf = new Notification("THÊM NHÂN VIÊN", "Thêm nhân viên thành công.","Mã nhân viên :"+manv);
             nf.Show();
         }
     }

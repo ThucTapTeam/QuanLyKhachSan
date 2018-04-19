@@ -38,6 +38,7 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -102,9 +103,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Quicksand Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(29, 78);
+            this.label1.Location = new System.Drawing.Point(30, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(506, 100);
+            this.label1.Size = new System.Drawing.Size(506, 66);
             this.label1.TabIndex = 6;
             this.label1.Text = "a";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,12 +159,25 @@
             this.bunifuDragControl2.TargetControl = this.label;
             this.bunifuDragControl2.Vertical = true;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Quicksand Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(30, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(506, 66);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "a";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Notification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(566, 261);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -188,5 +202,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
+        private System.Windows.Forms.Label label2;
     }
 }

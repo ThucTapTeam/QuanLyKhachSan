@@ -102,5 +102,11 @@ namespace QuanLyKhachSan
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Layout.DoanhThuControl());
         }
+
+        private void btqlphong_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Layout.QLPhong());
+        }
     }
 }

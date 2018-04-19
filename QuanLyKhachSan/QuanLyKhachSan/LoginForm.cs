@@ -62,7 +62,7 @@ namespace QuanLyKhachSan
 
         private void btlogin_Click(object sender, EventArgs e)
         {
-            HotelObject.NhanVienFo nv =new HotelObject.NhanVienFo();
+            HotelObject.NhanVienHo nv =new HotelObject.NhanVienHo();
             Connection cn = new Connection();
             nv.MaNhanVien = tbuser.Text.ToString();
             nv.MatKhau = tbpass.Text.ToString();
@@ -80,7 +80,7 @@ namespace QuanLyKhachSan
             }
             else
             {
-                Notification nf = new Notification("ĐĂNG NHẬP","Mật khẩu và tài khoản không hợp lệ.");
+                Notification nf = new Notification("ĐĂNG NHẬP","Mật khẩu và tài khoản không hợp lệ.","");
                 nf.Show();
             }
         }

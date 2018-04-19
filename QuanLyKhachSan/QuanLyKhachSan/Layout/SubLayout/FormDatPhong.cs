@@ -18,7 +18,8 @@ namespace QuanLyKhachSan
             InitializeComponent();
             label2.Text = sophong;
             label8.Text = "Tầng " + tangso;
-
+            DPNgayDat.Value = DateTime.Now;
+            DPNgayTra.Value = DateTime.Now;
         }
         ChuanHoa ch = new ChuanHoa();
         private const int CS_DROPSHADOW = 0x00020000;
@@ -68,58 +69,18 @@ namespace QuanLyKhachSan
         {
             this.Hide();
         }
-        string day, month, year,ngaydat;
-        string day1,month1, year1,ngaytra;
         private void dpngaytra_Change(object sender, EventArgs e)
         {
-            ngaytra= DPNgayTra.Value.ToString();
-            ch.ChuanHoaDate(ngaytra, out day1, out month1, out year1);
+            
         }
 
         private void dpdatphong_Change(object sender, EventArgs e)
         {
-            ngaydat = DPNgayDat.Value.ToString();
-            ch.ChuanHoaDate(ngaydat, out day, out month, out year);
         }
         private void btdatphong_Click(object sender, EventArgs e)
         {
-            ngaytra = DPNgayTra.Value.ToString();
-            ch.ChuanHoaDate(ngaytra, out day1, out month1, out year1);
-            ngaydat = DPNgayDat.Value.ToString();
-            ch.ChuanHoaDate(ngaydat, out day, out month, out year);
-            Connection cn = new Connection();
-            if (ch.CheckTB(tbhoten.Text, tbsocmt.Text, tbphone.Text)==false)
-            {
-                Notification nf = new Notification("LỖI", "Thông tin phải được nhập đầy đủ.");
-                nf.Show();
-            }
-            else if(ch.CheckDate(Int32.Parse(day), Int32.Parse(month), Int32.Parse(year), Int32.Parse(day1), Int32.Parse(month1), Int32.Parse(year1))==false)
-            {
-                Notification nf = new Notification("LỖI", "Ngày đặt phòng và ngày trả phòng không hợp lệ.");
-                nf.Show();
-            }
-            else
-            {
-                string temp=null,temp2=null;
-                string makhachhang=cn.LayBien("select makhachhang from khachhang order by makhachhang asc",0);
-                string mathue = cn.LayBien("select mathue from thuephong order by mathue asc", 0);
-                string maphong = cn.LayBien("select maphong from phong where tenphong='" + label2.Text + "'",0);
-                for(int i=2;i<makhachhang.Length;i++)
-                {
-                    temp = temp + makhachhang[i];
-                }
-                for (int i = 2; i < mathue.Length; i++)
-                {
-                    temp2 = temp2 + mathue[i];
-                }
-                makhachhang = "KH" + (Int32.Parse(temp) + 1).ToString();
-                mathue = "TP" + (Int32.Parse(temp2) + 1).ToString();
-                cn.InsertDeleteUpdate("INSERT INTO KHACHHANG VALUES('"+ makhachhang + "',N'" + tbhoten.Text + "',N'" + ddGioiTinh.selectedValue + "','"+tbsocmt.Text+"','" + tbphone.Text + "')");
-                cn.InsertDeleteUpdate("INSERT INTO THUEPHONG VALUES('" + mathue + "','" + makhachhang + "','" + maphong + "','" + year + month + day + "','" + year1 + month1 + day1 + "',1)");
-                Notification nf = new Notification("ĐẶT PHÒNG", "Đặt phòng thành công.");
-                nf.Show();
-                this.Hide();
-            }
+            Controller.DatPhongController dpc = new Controller.DatPhongController();
+            dpc.DatPhong(tbhoten,ddGioiTinh,tbsocmt,tbphone,DPNgayDat,DPNgayTra,label2,label8);
         }
         
         

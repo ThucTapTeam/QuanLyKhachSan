@@ -18,7 +18,6 @@ namespace QuanLyKhachSan.Layout
         string laytenphong;
         public TrangChuControl()
         {
-            
             InitializeComponent();
             tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, 2);
             tcc.RoomColor(panel1,panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, 2);
@@ -87,13 +86,13 @@ namespace QuanLyKhachSan.Layout
         
         private void DDTang_Select(object sender, EventArgs e)
         {
-            if(DDTang.selectedValue.ToString()== "Tầng 2 ( Gồm 10 Phòng)")
+            if(DDTang.selectedValue.ToString()== "Tầng 2")
             {
                 tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, 2);
                 tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, 2);
                 tang = 2;
             }
-            else if(DDTang.selectedValue.ToString() == "Tầng 3 ( Gồm 5 Phòng)")
+            else if(DDTang.selectedValue.ToString() == "Tầng 3")
             {
                 tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, 3);
                 tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, 3);
@@ -111,7 +110,6 @@ namespace QuanLyKhachSan.Layout
                 tcc.Tang(3,a,out laytenphong,btdattraphong);
             }
         }
-
 
         private void btdattraphong_Click(object sender, EventArgs e)
         {

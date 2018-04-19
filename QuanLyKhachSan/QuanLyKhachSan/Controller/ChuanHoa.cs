@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevComponents.DotNetBar.Controls;
 
 namespace QuanLyKhachSan
 {
@@ -73,7 +74,56 @@ namespace QuanLyKhachSan
                     }
                 }
             }
+            
             return temp;
         }
+        public string CH_Name(TextBoxX tb)
+        {
+            string temp=null,temp1=null;
+            temp = tb.Text.Trim();
+            while(temp.IndexOf("  ")>=0)
+            {
+                temp = temp.Replace("  ", " ");
+            }
+            temp = temp.ToLower();
+            for(int i=0;i<temp.Length;i++)
+            {
+                if (i == 0)
+                {
+                    temp1 += temp[i].ToString().ToUpper();
+                }
+                else
+                {
+                    if (temp[i] == ' ')
+                    {
+                        temp1 = temp1 + " " + temp[i+1].ToString().ToUpper();
+                        i++;
+                    }
+                    else
+                    {
+                        temp1 += temp[i];
+                    }
+                }
+            }
+            return temp1;
+        }
+        public string CH_Space(TextBoxX tb)
+        {
+            string temp = null;
+            temp = tb.Text.Trim();
+            while (temp.IndexOf("  ") >= 0)
+            {
+                temp = temp.Replace("  ", " ");
+            }
+            return temp;
+        }
+        /*
+        public bool Check_Number(TextBoxX tb)
+        {
+            bool check = false;
+            string temp = null;
+            temp = tb.Text;
+            return check;
+        }*/
     }
 }

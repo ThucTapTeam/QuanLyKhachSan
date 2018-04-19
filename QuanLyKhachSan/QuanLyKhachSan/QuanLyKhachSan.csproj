@@ -55,9 +55,16 @@
     <Compile Include="Controller\DatPhongController.cs" />
     <Compile Include="Controller\ThemNVController.cs" />
     <Compile Include="Controller\TrangChuController.cs" />
-    <Compile Include="HotelObject\KhachHangFo.cs" />
-    <Compile Include="HotelObject\NhanVienFo.cs" />
+    <Compile Include="HotelObject\KhachHangHo.cs" />
+    <Compile Include="HotelObject\NhanVienHo.cs" />
     <Compile Include="HotelObject\PhongFo.cs" />
+    <Compile Include="HotelObject\ThuePhongHo.cs" />
+    <Compile Include="Layout\QLPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layout\QLPhong.Designer.cs">
+      <DependentUpon>QLPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\SubLayout\FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +89,23 @@
     <Compile Include="Layout\QLNhanVienControl.Designer.cs">
       <DependentUpon>QLNhanVienControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\SubLayout\FormSuaTTNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormSuaTTNhanVien.Designer.cs">
+      <DependentUpon>FormSuaTTNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\SubLayout\FormThemNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Layout\SubLayout\FormThemNV.Designer.cs">
       <DependentUpon>FormThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemPhong.Designer.cs">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\TrangChuControl.cs">
       <SubType>UserControl</SubType>
@@ -114,6 +133,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Layout\QLPhong.resx">
+      <DependentUpon>QLPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\SubLayout\FormDatPhong.resx">
       <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,8 +148,14 @@
     <EmbeddedResource Include="Layout\QLNhanVienControl.resx">
       <DependentUpon>QLNhanVienControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SubLayout\FormSuaTTNhanVien.resx">
+      <DependentUpon>FormSuaTTNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\SubLayout\FormThemNV.resx">
       <DependentUpon>FormThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SubLayout\FormThemPhong.resx">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\TrangChuControl.resx">
       <DependentUpon>TrangChuControl.cs</DependentUpon>

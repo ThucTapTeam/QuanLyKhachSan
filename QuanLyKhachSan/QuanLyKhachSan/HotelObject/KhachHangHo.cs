@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.HotelObject
 {
-    public class KhachHangFo
+    public class KhachHangHo
     {
         private string m_MaKhachHang;
         public string MaKhachHang
