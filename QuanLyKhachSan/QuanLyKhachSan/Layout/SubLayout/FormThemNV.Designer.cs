@@ -323,8 +323,9 @@
             this.ddchucvu.DisabledColor = System.Drawing.Color.Gray;
             this.ddchucvu.ForeColor = System.Drawing.Color.White;
             this.ddchucvu.Items = new string[] {
-        "Nam",
-        "Nữ"};
+        "Nhân Viên",
+        "Lễ Tân",
+        "Quản Lý"};
             this.ddchucvu.Location = new System.Drawing.Point(315, 331);
             this.ddchucvu.Name = "ddchucvu";
             this.ddchucvu.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));

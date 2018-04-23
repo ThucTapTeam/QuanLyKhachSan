@@ -11,8 +11,9 @@ namespace QuanLyKhachSan.Controller
 {
     public class DatPhongController
     {
-        public void DatPhong(TextBoxX tbhoten,BunifuDropdown ddGioiTinh,TextBoxX tbsocmt,TextBoxX tbphone,BunifuDatepicker DPNgayDat,BunifuDatepicker DPNgayTra,Label label2,Label label8)
+        public void DatPhong(TextBoxX tbhoten,BunifuDropdown ddGioiTinh,TextBoxX tbsocmt,TextBoxX tbphone,BunifuDatepicker DPNgayDat,BunifuDatepicker DPNgayTra,Label label2,Label label8,out int transfer)
         {
+            transfer = 0;
             ChuanHoa ch = new ChuanHoa();
             HotelObject.KhachHangHo kh = new HotelObject.KhachHangHo();
             HotelObject.ThuePhongHo tp = new HotelObject.ThuePhongHo();
@@ -39,11 +40,17 @@ namespace QuanLyKhachSan.Controller
                 Notification nf = new Notification("LỖI", "Ngày đặt phòng và ngày trả phòng không hợp lệ.", "Mời bạn nhập lại.");
                 nf.Show();
             }
-            /*
-            else if (ch.Check_Number)
+            
+            else if (ch.Check_SoCMT(tbsocmt)==false)
             {
-
-            }*/
+                Notification nf = new Notification("LỖI", "Số CMT không hợp lệ.", "Mời bạn nhập lại.");
+                nf.Show();
+            }
+            else if(ch.Check_Phone(tbphone)==false)
+            {
+                Notification nf = new Notification("LỖI", "Số điện thoại không hợp lệ.", "Mời bạn nhập lại.");
+                nf.Show();
+            }
             else
             {     
                 kh.TenKhachHang = ch.CH_Name(tbhoten);
@@ -66,8 +73,7 @@ namespace QuanLyKhachSan.Controller
                 cn.InsertDeleteUpdate("INSERT INTO THUEPHONG VALUES('" + tp.MaThue + "','" + kh.MaKhachHang + "','" + p.MaPhong + "','" + year + month + day + "','" + year1 + month1 + day1 + "',1)");
                 Notification nf = new Notification("ĐẶT PHÒNG", "Đặt phòng thành công.", "");
                 nf.Show();
-                FormDatPhong fdp = new FormDatPhong(label2.Text, label8.Text);
-                fdp.Hide();
+                transfer = 1;
             }
         }
     }

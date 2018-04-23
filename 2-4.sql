@@ -104,3 +104,5 @@ select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>cast(getdate() as date
 select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG and THUEPHONG.TRANGTHAI=1 where THUEPHONG.MAPHONG is null and PHONG.SOTANG=3 and phong.MAPHONG='P304'
 --qua ngay doi trang thai
 
+
+

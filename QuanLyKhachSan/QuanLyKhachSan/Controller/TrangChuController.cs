@@ -38,10 +38,10 @@ namespace QuanLyKhachSan.Controller
         public void RoomColor(Panel panel1, Panel panel2, Panel panel3, Panel panel4, Panel panel5, Panel panel6, Panel panel7, Panel panel8, Panel panel9, Panel panel10, Panel panel11, Panel panel12, Panel panel13, Panel panel14, Panel panel15, int tangso)
         {
             
-            sophong = conn.sophong("select count(TENPHONG) FROM PHONG WHERE SOTANG=" + tangso, 0);
+            sophong = conn.sophong("EXEC PRO_SELECT_SOPHONG " + tangso, 0);
             Panel[] pn = new Panel[20];
             string[] tenphong1 = new string[15];
-            conn.trangchu(tenphong1, "select TENPHONG FROM PHONG WHERE SOTANG=" + tangso, 0);
+            conn.trangchu(tenphong1, "EXEC PRO_SELECT_TENPHONG " + tangso, 0);
 
             pn[0] = panel1;
             pn[1] = panel2;
@@ -58,9 +58,9 @@ namespace QuanLyKhachSan.Controller
             pn[12] = panel13;
             pn[13] = panel14;
             pn[14] = panel15;
-            phongso = CheckPhong(tenphong1, "select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>=cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and THUEPHONG.TRANGTHAI=1 and PHONG.SOTANG=" + tangso + "order by tenphong", Int32.Parse(sophong), tangso, out sophongdangthue);
-            phongtramuon = CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1  AND PHONG.SOTANG=" + tangso + " order by tenphong", Int32.Parse(sophong), tangso, out sophongtramuon);
-            phongdattruoc = CheckPhong(tenphong1, "SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1 AND PHONG.SOTANG=" + tangso + " order by tenphong", Int32.Parse(sophong), tangso, out sophongdattruoc);
+            phongso = CheckPhong(tenphong1, "EXEC PROC_SELECT_PHONGDANGTHUE "+tangso, Int32.Parse(sophong), tangso, out sophongdangthue);
+            phongtramuon = CheckPhong(tenphong1, "EXEC PROC_SELECT_PHONGTHUEMUON "+tangso, Int32.Parse(sophong), tangso, out sophongtramuon);
+            phongdattruoc = CheckPhong(tenphong1, "EXEC PROC_SELECT_PHONGDATTRUOC "+tangso, Int32.Parse(sophong), tangso, out sophongdattruoc);
             for (int i = 0; i < Int32.Parse(sophong); i++)
             {
                 pn[i].BackColor = Color.FromArgb(149, 165, 166);
@@ -86,7 +86,7 @@ namespace QuanLyKhachSan.Controller
         }
         public void Phong(Label label1, Label label2, Label label3, Label label4, Label label5, Label label6, Label label7, Label label8, Label label9, Label label10, Label label11, Label label12, Label label13, Label label14, Label label15, int sotang)
         {
-            sophong = conn.sophong("select count(TENPHONG) FROM PHONG WHERE SOTANG=" + sotang, 0);
+            sophong = conn.sophong("EXEC PRO_SELECT_SOPHONG " + sotang, 0);
             string[] tenphong = new string[15];
             Label[] lb = new Label[20];
             lb[0] = label1;
@@ -105,7 +105,7 @@ namespace QuanLyKhachSan.Controller
             lb[13] = label14;
             lb[14] = label15;
 
-            conn.trangchu(tenphong, "select TENPHONG FROM PHONG WHERE SOTANG=" + sotang, 0);
+            conn.trangchu(tenphong, "EXEC PRO_SELECT_TENPHONG " + sotang, 0);
             for (int i = 0; i < Int32.Parse(sophong); i++)
             {
 
@@ -119,6 +119,7 @@ namespace QuanLyKhachSan.Controller
         }
         public void Tang(int temp, int a,out string laytenphong, BunifuFlatButton btdattraphong)
         {
+            string ghepmaphong;
             laytenphong = null;
             HotelObject.PhongFo p = new HotelObject.PhongFo();
             HotelObject.PhongFo p1 = new HotelObject.PhongFo();
@@ -128,11 +129,18 @@ namespace QuanLyKhachSan.Controller
             p1.TenPhong = null;
             p2.TenPhong = null;
             p3.TenPhong = null;
-            string ghepmaphong = "P" + temp.ToString() + "0" + a.ToString();
-            p.TenPhong = conn.LayBien("select tenphong from THUEPHONG INNER JOIN PHONG ON NGAYRA>=cast(getdate() as date) AND THUEPHONG.MAPHONG=PHONG.MAPHONG and THUEPHONG.TRANGTHAI=1 and PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            p1.TenPhong = conn.LayBien("select tenphong from THUEPHONG RIGHT JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG and THUEPHONG.TRANGTHAI=1 where THUEPHONG.MAPHONG is null and PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            p2.TenPhong = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYRA<CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1  AND PHONG.SOTANG=" + temp + "  and phong.MAPHONG='" + ghepmaphong + "'", 0);
-            p3.TenPhong = conn.LayBien("SELECT TENPHONG FROM THUEPHONG INNER JOIN PHONG ON THUEPHONG.MAPHONG=PHONG.MAPHONG AND THUEPHONG.NGAYVAO>CAST(GETDATE() AS DATE) and THUEPHONG.TRANGTHAI=1 AND PHONG.SOTANG=" + temp + " and phong.MAPHONG='" + ghepmaphong + "'", 0);
+            if (temp.ToString().Length == 1)
+            {
+                ghepmaphong = "P" + temp.ToString() + "0" + a.ToString();
+            }
+            else
+            {
+                ghepmaphong = "P" + temp.ToString() + a.ToString();
+            }
+            p.TenPhong = conn.LayBien("EXEC PROC_SELECT_PHONGDANGO1 "+temp+",'"+ghepmaphong+"'", 0);
+            p1.TenPhong = conn.LayBien("EXEC PROC_SELECT_PHONGDANGTHUE1 "+temp+", '"+ghepmaphong+"'", 0);
+            p2.TenPhong = conn.LayBien("EXEC PROC_SELECT_PHONGTRAMUON1 "+temp+",'"+ghepmaphong+"'", 0);
+            p3.TenPhong = conn.LayBien("EXEC PROC_SELECT_PHONGDATCOCTRUOC1 "+temp+",'"+ghepmaphong+"'", 0);
             if (p.TenPhong != null)
             {
                 btdattraphong.Text = "Trả Phòng";

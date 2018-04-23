@@ -20,7 +20,7 @@ namespace QuanLyKhachSan
             label1.Text = hoten;
             label2.Text = chucvu;
             pictureBox1.Image = Image.FromFile(avatar);
-            if(chucvu!="Quản lý")
+            if(chucvu!="Quản Lý")
             {
                 btqlynhanvien.Enabled = false;
                 btdoanhthu.Enabled = false;

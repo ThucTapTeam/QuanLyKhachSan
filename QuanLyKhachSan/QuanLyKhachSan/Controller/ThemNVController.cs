@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,23 +14,42 @@ namespace QuanLyKhachSan.Controller
     {
         string day, month, year;
         Connection conn = new Connection();
-        public void ThemNhanVien(TextBoxX tbhoten,BunifuDropdown ddGioiTinh, TextBoxX tbpass, TextBoxX tbphone,BunifuDatepicker DPNgaySinh, BunifuDropdown ddchucvu,string btavtar)
+        public void ThemNhanVien(TextBoxX tbhoten,BunifuDropdown ddGioiTinh, TextBoxX tbpass, TextBoxX tbphone,BunifuDatepicker DPNgaySinh, BunifuDropdown ddchucvu,string btavtar,out int transfer)
         {
-            string manv = null;
-            string ngaysinh=null,temp=null;
+            transfer = 0;
+            HotelObject.NhanVienHo nv = new HotelObject.NhanVienHo(); 
+            string temp=null;
             ChuanHoa ch = new ChuanHoa();
-            ngaysinh = DPNgaySinh.Value.ToString();
-            ch.ChuanHoaDate(ngaysinh, out day, out month, out year);
-            ngaysinh = year + month + day;
-            manv = conn.LayBien("select manhanvien from nhanvien order by manhanvien asc", 0);
-            for (int i = 2; i < manv.Length; i++)
+            nv.NgaySinh= DPNgaySinh.Value.ToString();
+            ch.ChuanHoaDate(nv.NgaySinh, out day, out month, out year);
+            nv.NgaySinh = year + month + day;
+            nv.MaNhanVien = conn.LayBien("EXEC PROC_SELECT_MANHANVIEN", 0);
+            for (int i = 2; i < nv.NgaySinh.Length; i++)
             {
-                temp = temp + manv[i];
+                temp = temp + nv.NgaySinh[i];
             }
-            manv="NV"+ (Int32.Parse(temp) + 1).ToString();
-            conn.InsertDeleteUpdate("INSERT INTO NHANVIEN VALUES('"+manv+"','"+tbpass.Text+"',N'"+tbhoten.Text+"',N'"+ddchucvu.selectedValue+"',N'"+ddGioiTinh.selectedValue+"','"+btavtar+"','"+year+month+day+"','"+tbphone.Text+"')");
-            Notification nf = new Notification("THÊM NHÂN VIÊN", "Thêm nhân viên thành công.","Mã nhân viên :"+manv);
-            nf.Show();
+            nv.NgaySinh = "NV"+ (Int32.Parse(temp) + 1).ToString();
+            nv.HoTen = ch.CH_Name(tbhoten);
+            if(ch.Check_Phone(tbphone)==false)
+            {
+                Notification nf = new Notification("LỖI", "Số điện thoại không hợp lệ", "Mời bạn nhập lại.");
+                nf.Show();
+                transfer = 0;
+            }
+            else if(ch.Check_Text_Name(tbhoten)==false)
+            {
+                Notification nf = new Notification("LỖI", "Tên nhập chứa chữ số", "Mời bạn nhập lại.");
+                nf.Show();
+                transfer = 0;
+            }
+            else
+            {
+                conn.InsertDeleteUpdate("EXEC PROC_INSERT_NHANVIEN '" + nv.MaNhanVien + "','" + tbpass.Text + "',N'" + tbhoten.Text + "',N'" + ddchucvu.selectedValue + "',N'" + ddGioiTinh.selectedValue + "','" + btavtar + "','" + year + month + day + "','" + tbphone.Text + "'");
+                Notification nf = new Notification("THÊM NHÂN VIÊN", "Thêm nhân viên thành công.", "Mã nhân viên :" + nv.MaNhanVien);
+                nf.Show();
+                transfer = 1;
+            }
+            
         }
     }
 }

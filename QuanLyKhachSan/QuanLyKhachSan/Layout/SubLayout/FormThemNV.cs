@@ -77,8 +77,12 @@ namespace QuanLyKhachSan.Layout.SubLayout
         private void btdatphong_Click(object sender, EventArgs e)
         {
             Controller.ThemNVController themnv = new Controller.ThemNVController();
-            themnv.ThemNhanVien(tbhoten,ddGioiTinh,tbpass,tbphone,DPNgaySinh,ddchucvu,linkavatar);
-            this.Hide();
+            int transfer;
+            themnv.ThemNhanVien(tbhoten,ddGioiTinh,tbpass,tbphone,DPNgaySinh,ddchucvu,linkavatar,out transfer);
+            if (transfer==1)
+            {
+                this.Hide();
+            }
         }
     }
 }

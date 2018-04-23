@@ -79,8 +79,13 @@ namespace QuanLyKhachSan
         }
         private void btdatphong_Click(object sender, EventArgs e)
         {
+            int transfer;
             Controller.DatPhongController dpc = new Controller.DatPhongController();
-            dpc.DatPhong(tbhoten,ddGioiTinh,tbsocmt,tbphone,DPNgayDat,DPNgayTra,label2,label8);
+            dpc.DatPhong(tbhoten,ddGioiTinh,tbsocmt,tbphone,DPNgayDat,DPNgayTra,label2,label8,out transfer);
+            if(transfer==1)
+            {
+                this.Hide();
+            }
         }
         
         

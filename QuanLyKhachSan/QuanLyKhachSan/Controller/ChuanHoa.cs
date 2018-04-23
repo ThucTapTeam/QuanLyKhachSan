@@ -117,13 +117,95 @@ namespace QuanLyKhachSan
             }
             return temp;
         }
-        /*
-        public bool Check_Number(TextBoxX tb)
+        
+        public bool Check_SoCMT(TextBoxX tb)
         {
             bool check = false;
             string temp = null;
             temp = tb.Text;
+            if (temp.Length == 9 || temp.Length == 12)
+            {
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    if (temp[i] == ' ')
+                    {
+                        check = false;
+                        break;
+                    }
+                    else
+                    {
+                        if (Char.IsNumber(temp[i]) == true)
+                        {
+                            check = true;
+                        }
+                        else
+                        {
+                            check = false;
+                            break;
+                        }
+                    }
+                }
+            }
             return check;
-        }*/
+        }
+        public bool Check_Text_Name(TextBoxX tb)
+        {
+            bool check = false;
+            string temp = null;
+            temp = tb.Text;
+            for(int i=0;i<temp.Length;i++)
+            {
+                if (Char.IsNumber(temp[i]))
+                {
+                    check = false;
+                }
+                else
+                {
+                    check = true;
+                }
+            }
+            return check;
+        }
+        public bool Check_Phone(TextBoxX tb)
+        {
+            bool check = false;
+            string temp = null;
+            temp = tb.Text;
+            if (temp.Length == 10 || temp.Length == 11)
+            {
+                
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    if (temp[i] == ' ')
+                    {
+                        check = false;
+                        break;
+                    }
+                    else
+                    {
+                        if (Char.IsNumber(temp[i]) == true)
+                        {
+                            check = true;
+                        }
+                        else
+                        {
+                            check = false;
+                            break;
+                        }
+                    }
+                }
+                if (temp.Length == 10)
+                {
+                    if (temp[0] == '0' && temp[1] == '9') check = true;
+                    else check = false;
+                }
+                else
+                {
+                    if (temp[0] == '0' && temp[1] == '1') check = true;
+                    else check = false;
+                }
+            }
+            return check;
+        }
     }
 }
