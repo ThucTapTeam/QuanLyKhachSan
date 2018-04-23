@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSuaTTNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbhoten = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -317,6 +319,11 @@
             this.label1.TabIndex = 43;
             this.label1.Text = "Họ tên nhân viên";
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // FormSuaTTNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,5 +375,6 @@
         private System.Windows.Forms.Label label3;
         private DevComponents.DotNetBar.Controls.TextBoxX tbhoten;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

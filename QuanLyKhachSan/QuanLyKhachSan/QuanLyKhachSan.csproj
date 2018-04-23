@@ -95,17 +95,23 @@
     <Compile Include="Layout\SubLayout\FormSuaTTNhanVien.Designer.cs">
       <DependentUpon>FormSuaTTNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\SubLayout\FormThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemDichVu.Designer.cs">
+      <DependentUpon>FormThemDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemDichVuPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThemDichVuPhong.Designer.cs">
+      <DependentUpon>FormThemDichVuPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\SubLayout\FormThemNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Layout\SubLayout\FormThemNV.Designer.cs">
       <DependentUpon>FormThemNV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Layout\SubLayout\FormThemPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Layout\SubLayout\FormThemPhong.Designer.cs">
-      <DependentUpon>FormThemPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\TrangChuControl.cs">
       <SubType>UserControl</SubType>
@@ -151,11 +157,14 @@
     <EmbeddedResource Include="Layout\SubLayout\FormSuaTTNhanVien.resx">
       <DependentUpon>FormSuaTTNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SubLayout\FormThemDichVu.resx">
+      <DependentUpon>FormThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SubLayout\FormThemDichVuPhong.resx">
+      <DependentUpon>FormThemDichVuPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\SubLayout\FormThemNV.resx">
       <DependentUpon>FormThemNV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Layout\SubLayout\FormThemPhong.resx">
-      <DependentUpon>FormThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\TrangChuControl.resx">
       <DependentUpon>TrangChuControl.cs</DependentUpon>

@@ -54,6 +54,7 @@
             this.pbavatar = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -406,6 +407,11 @@
             this.bunifuDragControl1.TargetControl = this.panel1;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // FormThemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,5 +475,6 @@
         private System.Windows.Forms.PictureBox pbavatar;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

@@ -30,6 +30,11 @@ namespace QuanLyKhachSan.Controller
                 Notification nf = new Notification("LỖI", "Thông tin phải được nhập đầy đủ.", "Mời bạn nhập lại.");
                 nf.Show();
             }
+            else if(ch.Check_Text_Name(tbhoten)==false)
+            {
+                Notification nf = new Notification("LỖI", "Tên không chứa chữ số.", "Mời bạn nhập lại.");
+                nf.Show();
+            }
             else if (ch.CheckDate(Int32.Parse(day2), Int32.Parse(month2), Int32.Parse(year2), Int32.Parse(day), Int32.Parse(month), Int32.Parse(year)) == false)
             {
                 Notification nf = new Notification("LỖI", "Ngày đặt phòng không hợp lệ.", "Mời bạn nhập lại.");

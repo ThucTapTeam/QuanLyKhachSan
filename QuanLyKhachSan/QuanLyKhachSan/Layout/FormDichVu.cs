@@ -16,5 +16,11 @@ namespace QuanLyKhachSan.Layout
         {
             InitializeComponent();
         }
+
+        private void bthemdichvu(object sender, EventArgs e)
+        {
+            SubLayout.FormThemDichVu ftdv = new SubLayout.FormThemDichVu();
+            ftdv.Show();
+        }
     }
 }

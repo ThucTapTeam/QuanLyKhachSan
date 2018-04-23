@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan.Layout.SubLayout
 {
-    partial class FormThemPhong
+    partial class FormThemDichVu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemPhong));
-            this.ddGioiTinh = new Bunifu.Framework.UI.BunifuDropdown();
-            this.DPNgayDat = new Bunifu.Framework.UI.BunifuDatepicker();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemDichVu));
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.DPNgayTra = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tbphone = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label5 = new System.Windows.Forms.Label();
             this.tbsocmt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,43 +42,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ddGioiTinh
-            // 
-            this.ddGioiTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.ddGioiTinh.BorderRadius = 3;
-            this.ddGioiTinh.DisabledColor = System.Drawing.Color.Gray;
-            this.ddGioiTinh.ForeColor = System.Drawing.Color.White;
-            this.ddGioiTinh.Items = new string[] {
-        "Nam",
-        "Nữ"};
-            this.ddGioiTinh.Location = new System.Drawing.Point(315, 121);
-            this.ddGioiTinh.Name = "ddGioiTinh";
-            this.ddGioiTinh.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.ddGioiTinh.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.ddGioiTinh.selectedIndex = 0;
-            this.ddGioiTinh.Size = new System.Drawing.Size(272, 35);
-            this.ddGioiTinh.TabIndex = 37;
-            // 
-            // DPNgayDat
-            // 
-            this.DPNgayDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.DPNgayDat.BorderRadius = 5;
-            this.DPNgayDat.ForeColor = System.Drawing.Color.White;
-            this.DPNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DPNgayDat.FormatCustom = "dd/MM/yyyy";
-            this.DPNgayDat.Location = new System.Drawing.Point(315, 271);
-            this.DPNgayDat.Name = "DPNgayDat";
-            this.DPNgayDat.Size = new System.Drawing.Size(272, 36);
-            this.DPNgayDat.TabIndex = 36;
-            this.DPNgayDat.Value = new System.DateTime(2018, 4, 8, 0, 0, 0, 0);
             // 
             // bunifuFlatButton2
             // 
@@ -107,7 +72,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(381, 380);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(381, 256);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -119,6 +84,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bthuy_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -141,7 +107,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(103, 380);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(103, 256);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(155)))), ((int)(((byte)(7)))));
@@ -154,39 +120,6 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // DPNgayTra
-            // 
-            this.DPNgayTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.DPNgayTra.BorderRadius = 5;
-            this.DPNgayTra.ForeColor = System.Drawing.Color.White;
-            this.DPNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DPNgayTra.FormatCustom = "dd/MM/yyyy";
-            this.DPNgayTra.Location = new System.Drawing.Point(315, 324);
-            this.DPNgayTra.Name = "DPNgayTra";
-            this.DPNgayTra.Size = new System.Drawing.Size(272, 36);
-            this.DPNgayTra.TabIndex = 33;
-            this.DPNgayTra.Value = new System.DateTime(2018, 4, 9, 0, 0, 0, 0);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(98, 327);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 26);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Ngày trả phòng";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(98, 274);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 26);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Ngày đặt phòng";
-            // 
             // tbphone
             // 
             // 
@@ -195,21 +128,11 @@
             this.tbphone.Border.Class = "TextBoxBorder";
             this.tbphone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbphone.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbphone.Location = new System.Drawing.Point(315, 224);
+            this.tbphone.Location = new System.Drawing.Point(315, 180);
             this.tbphone.Name = "tbphone";
             this.tbphone.PreventEnterBeep = true;
             this.tbphone.Size = new System.Drawing.Size(272, 29);
             this.tbphone.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(98, 226);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 26);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Điện thoại";
             // 
             // tbsocmt
             // 
@@ -219,7 +142,7 @@
             this.tbsocmt.Border.Class = "TextBoxBorder";
             this.tbsocmt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbsocmt.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbsocmt.Location = new System.Drawing.Point(315, 175);
+            this.tbsocmt.Location = new System.Drawing.Point(315, 136);
             this.tbsocmt.Name = "tbsocmt";
             this.tbsocmt.PreventEnterBeep = true;
             this.tbsocmt.Size = new System.Drawing.Size(272, 29);
@@ -229,21 +152,21 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(98, 177);
+            this.label4.Location = new System.Drawing.Point(98, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 26);
+            this.label4.Size = new System.Drawing.Size(75, 26);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Số CMT";
+            this.label4.Text = "Giá tiền";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 130);
+            this.label3.Location = new System.Drawing.Point(98, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 26);
+            this.label3.Size = new System.Drawing.Size(84, 26);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Giới tính";
+            this.label3.Text = "Số lượng";
             // 
             // tbhoten
             // 
@@ -253,7 +176,7 @@
             this.tbhoten.Border.Class = "TextBoxBorder";
             this.tbhoten.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbhoten.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbhoten.Location = new System.Drawing.Point(315, 82);
+            this.tbhoten.Location = new System.Drawing.Point(315, 88);
             this.tbhoten.Name = "tbhoten";
             this.tbhoten.PreventEnterBeep = true;
             this.tbhoten.Size = new System.Drawing.Size(272, 29);
@@ -263,11 +186,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 84);
+            this.label1.Location = new System.Drawing.Point(98, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 26);
+            this.label1.Size = new System.Drawing.Size(105, 26);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Họ tên khách hàng";
+            this.label1.Text = "Tên dịch vụ";
             // 
             // panel1
             // 
@@ -292,6 +215,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.close_Click);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.close_Leave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.close_Hover);
             // 
             // label2
             // 
@@ -302,7 +228,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(259, 40);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Thêm Phòng";
+            this.label2.Text = "Thêm dịch vụ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -316,6 +242,25 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.mini_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.mini_Leave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.mini_Hover);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(559, 181);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 26);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "đ";
             // 
             // bunifuDragControl1
             // 
@@ -331,26 +276,16 @@
             this.bunifuDragControl2.TargetControl = this.label2;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // bunifuDragControl3
-            // 
-            this.bunifuDragControl3.Fixed = true;
-            this.bunifuDragControl3.Horizontal = true;
-            this.bunifuDragControl3.Vertical = true;
-            // 
-            // FormThemPhong
+            // FormThemDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 440);
-            this.Controls.Add(this.ddGioiTinh);
-            this.Controls.Add(this.DPNgayDat);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(721, 353);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.DPNgayTra);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.tbphone);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.tbsocmt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -358,9 +293,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormThemPhong";
+            this.Name = "FormThemDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormThemPhong";
+            this.Text = "FormThemDichVu";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -370,16 +305,9 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuDropdown ddGioiTinh;
-        private Bunifu.Framework.UI.BunifuDatepicker DPNgayDat;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuDatepicker DPNgayTra;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private DevComponents.DotNetBar.Controls.TextBoxX tbphone;
-        private System.Windows.Forms.Label label5;
         private DevComponents.DotNetBar.Controls.TextBoxX tbsocmt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -389,8 +317,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl3;
     }
 }
