@@ -121,10 +121,10 @@ namespace QuanLyKhachSan.Controller
         {
             string ghepmaphong;
             laytenphong = null;
-            HotelObject.PhongFo p = new HotelObject.PhongFo();
-            HotelObject.PhongFo p1 = new HotelObject.PhongFo();
-            HotelObject.PhongFo p2 = new HotelObject.PhongFo();
-            HotelObject.PhongFo p3 = new HotelObject.PhongFo();
+            HotelObject.PhongHo p = new HotelObject.PhongHo();
+            HotelObject.PhongHo p1 = new HotelObject.PhongHo();
+            HotelObject.PhongHo p2 = new HotelObject.PhongHo();
+            HotelObject.PhongHo p3 = new HotelObject.PhongHo();
             p.TenPhong = null;
             p1.TenPhong = null;
             p2.TenPhong = null;

@@ -207,5 +207,33 @@ namespace QuanLyKhachSan
             }
             return check;
         }
+
+        public bool Check_Number(TextBoxX tb)
+        {
+            bool check = false;
+            string temp = null;
+            temp = tb.Text;
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (temp[i] == ' ')
+                {
+                    check = false;
+                    break;
+                }
+                else
+                {
+                    if (Char.IsNumber(temp[i]) == true)
+                    {
+                        check = true;
+                    }
+                    else
+                    {
+                        check = false;
+                        break;
+                    }
+                }
+            }
+            return check;
+        }
     }
 }

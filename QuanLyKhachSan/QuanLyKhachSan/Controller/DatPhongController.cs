@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.Controller
             ChuanHoa ch = new ChuanHoa();
             HotelObject.KhachHangHo kh = new HotelObject.KhachHangHo();
             HotelObject.ThuePhongHo tp = new HotelObject.ThuePhongHo();
-            HotelObject.PhongFo p = new HotelObject.PhongFo();
+            HotelObject.PhongHo p = new HotelObject.PhongHo();
             string day, month, year;
             string day1, month1, year1;
             string day2, month2, year2;

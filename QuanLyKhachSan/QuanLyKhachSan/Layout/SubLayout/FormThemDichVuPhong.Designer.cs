@@ -217,7 +217,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(259, 40);
             this.label2.TabIndex = 5;
-            this.label2.Text = "SỬA THÔNG TIN";
+            this.label2.Text = "THÊM THÔNG TIN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2

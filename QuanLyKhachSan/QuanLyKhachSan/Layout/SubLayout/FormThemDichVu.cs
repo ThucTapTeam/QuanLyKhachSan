@@ -63,5 +63,11 @@ namespace QuanLyKhachSan.Layout.SubLayout
         {
             this.Hide();
         }
+
+        private void btchapnhan_Click(object sender, EventArgs e)
+        {
+            Controller.ThemDVController tdv = new Controller.ThemDVController();
+            tdv.ThemDichVu(tbtendv,tbsoluong,tbgiatien);
+        }
     }
 }

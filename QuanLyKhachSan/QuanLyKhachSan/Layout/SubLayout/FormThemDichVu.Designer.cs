@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemDichVu));
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tbphone = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tbsocmt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbgiatien = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbsoluong = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbhoten = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbtendv = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -92,7 +92,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "ĐẶT PHÒNG";
+            this.bunifuFlatButton1.ButtonText = "CHẤP NHẬN";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
@@ -115,38 +115,40 @@
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(206, 48);
             this.bunifuFlatButton1.TabIndex = 34;
-            this.bunifuFlatButton1.Text = "ĐẶT PHÒNG";
+            this.bunifuFlatButton1.Text = "CHẤP NHẬN";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.btchapnhan_Click);
             // 
-            // tbphone
-            // 
-            // 
-            // 
-            // 
-            this.tbphone.Border.Class = "TextBoxBorder";
-            this.tbphone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbphone.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbphone.Location = new System.Drawing.Point(315, 180);
-            this.tbphone.Name = "tbphone";
-            this.tbphone.PreventEnterBeep = true;
-            this.tbphone.Size = new System.Drawing.Size(272, 29);
-            this.tbphone.TabIndex = 30;
-            // 
-            // tbsocmt
+            // tbgiatien
             // 
             // 
             // 
             // 
-            this.tbsocmt.Border.Class = "TextBoxBorder";
-            this.tbsocmt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbsocmt.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbsocmt.Location = new System.Drawing.Point(315, 136);
-            this.tbsocmt.Name = "tbsocmt";
-            this.tbsocmt.PreventEnterBeep = true;
-            this.tbsocmt.Size = new System.Drawing.Size(272, 29);
-            this.tbsocmt.TabIndex = 28;
+            this.tbgiatien.Border.Class = "TextBoxBorder";
+            this.tbgiatien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbgiatien.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbgiatien.Location = new System.Drawing.Point(315, 180);
+            this.tbgiatien.Name = "tbgiatien";
+            this.tbgiatien.PreventEnterBeep = true;
+            this.tbgiatien.Size = new System.Drawing.Size(272, 29);
+            this.tbgiatien.TabIndex = 30;
+            this.tbgiatien.WatermarkText = "VD: 1234000";
+            // 
+            // tbsoluong
+            // 
+            // 
+            // 
+            // 
+            this.tbsoluong.Border.Class = "TextBoxBorder";
+            this.tbsoluong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbsoluong.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbsoluong.Location = new System.Drawing.Point(315, 136);
+            this.tbsoluong.Name = "tbsoluong";
+            this.tbsoluong.PreventEnterBeep = true;
+            this.tbsoluong.Size = new System.Drawing.Size(272, 29);
+            this.tbsoluong.TabIndex = 28;
             // 
             // label4
             // 
@@ -154,9 +156,9 @@
             this.label4.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(98, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 26);
+            this.label4.Size = new System.Drawing.Size(129, 26);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Giá tiền";
+            this.label4.Text = "Giá tiền / 1 cái";
             // 
             // label3
             // 
@@ -168,19 +170,19 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Số lượng";
             // 
-            // tbhoten
+            // tbtendv
             // 
             // 
             // 
             // 
-            this.tbhoten.Border.Class = "TextBoxBorder";
-            this.tbhoten.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbhoten.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbhoten.Location = new System.Drawing.Point(315, 88);
-            this.tbhoten.Name = "tbhoten";
-            this.tbhoten.PreventEnterBeep = true;
-            this.tbhoten.Size = new System.Drawing.Size(272, 29);
-            this.tbhoten.TabIndex = 25;
+            this.tbtendv.Border.Class = "TextBoxBorder";
+            this.tbtendv.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbtendv.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbtendv.Location = new System.Drawing.Point(315, 88);
+            this.tbtendv.Name = "tbtendv";
+            this.tbtendv.PreventEnterBeep = true;
+            this.tbtendv.Size = new System.Drawing.Size(272, 29);
+            this.tbtendv.TabIndex = 25;
             // 
             // label1
             // 
@@ -256,7 +258,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(559, 181);
+            this.label5.Location = new System.Drawing.Point(560, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 26);
             this.label5.TabIndex = 36;
@@ -285,11 +287,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.tbphone);
-            this.Controls.Add(this.tbsocmt);
+            this.Controls.Add(this.tbgiatien);
+            this.Controls.Add(this.tbsoluong);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbhoten);
+            this.Controls.Add(this.tbtendv);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -307,11 +309,11 @@
         #endregion
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbphone;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbsocmt;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbgiatien;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbsoluong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbhoten;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbtendv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
