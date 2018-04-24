@@ -83,20 +83,33 @@ namespace QuanLyKhachSan.Layout
         {
             EventKTTang(15);
         }
-        
+        private void Display(int tang)
+        {
+            tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
+            tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
+
+        }
         private void DDTang_Select(object sender, EventArgs e)
         {
             if(DDTang.selectedValue.ToString()== "Tầng 2")
             {
-                tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, 2);
-                tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, 2);
+                Display(2);
                 tang = 2;
             }
             else if(DDTang.selectedValue.ToString() == "Tầng 3")
             {
-                tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, 3);
-                tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, 3);
+                Display(3);
                 tang = 3;
+            }
+            else if (DDTang.selectedValue.ToString() == "Tầng 4")
+            {
+                Display(4);
+                tang = 4;
+            }
+            else if (DDTang.selectedValue.ToString() == "Tầng 5")
+            {
+                Display(5);
+                tang = 5;
             }
         }
         private void EventKTTang(int a)
@@ -108,6 +121,14 @@ namespace QuanLyKhachSan.Layout
             else if(tang==3)
             {
                 tcc.Tang(3,a,out laytenphong,btdattraphong);
+            }
+            else if (tang == 4)
+            {
+                tcc.Tang(4, a, out laytenphong, btdattraphong);
+            }
+            else if (tang == 5)
+            {
+                tcc.Tang(5, a, out laytenphong, btdattraphong);
             }
         }
 

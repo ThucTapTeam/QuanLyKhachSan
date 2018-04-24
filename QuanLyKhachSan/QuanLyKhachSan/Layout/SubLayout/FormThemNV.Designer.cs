@@ -205,6 +205,7 @@
             this.tbpass.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpass.Location = new System.Drawing.Point(315, 181);
             this.tbpass.Name = "tbpass";
+            this.tbpass.PasswordChar = '°';
             this.tbpass.PreventEnterBeep = true;
             this.tbpass.Size = new System.Drawing.Size(272, 29);
             this.tbpass.TabIndex = 28;

@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +54,7 @@
     <Compile Include="Controller\ChuanHoa.cs" />
     <Compile Include="Controller\Connection.cs" />
     <Compile Include="Controller\DatPhongController.cs" />
+    <Compile Include="Controller\ThemDVPhongController.cs" />
     <Compile Include="Controller\ThemNVController.cs" />
     <Compile Include="Controller\TrangChuController.cs" />
     <Compile Include="HotelObject\KhachHangHo.cs" />

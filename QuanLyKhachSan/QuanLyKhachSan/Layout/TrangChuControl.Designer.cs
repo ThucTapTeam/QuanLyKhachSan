@@ -423,7 +423,9 @@
             this.DDTang.ForeColor = System.Drawing.Color.White;
             this.DDTang.Items = new string[] {
         "Tầng 2",
-        "Tầng 3"};
+        "Tầng 3",
+        "Tầng 4",
+        "Tầng 5"};
             this.DDTang.Location = new System.Drawing.Point(166, -1);
             this.DDTang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DDTang.Name = "DDTang";

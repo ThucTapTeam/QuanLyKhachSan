@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemDichVuPhong));
-            this.ddGioiTinh = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddtenphong = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btdatphong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,10 +40,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddsotang = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tenphong = new System.Windows.Forms.Label();
+            this.loaiphong = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -54,35 +54,33 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ddGioiTinh
+            // ddtenphong
             // 
-            this.ddGioiTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.ddGioiTinh.BorderRadius = 3;
-            this.ddGioiTinh.DisabledColor = System.Drawing.Color.Gray;
-            this.ddGioiTinh.ForeColor = System.Drawing.Color.White;
-            this.ddGioiTinh.Items = new string[] {
-        "P201",
-        "P202",
-        "P203",
-        "P204",
-        "P205",
-        "P206",
-        "P207",
-        "P208",
-        "P209",
-        "P210",
-        "P211",
-        "P212",
-        "P213",
-        "P214",
-        "P215"};
-            this.ddGioiTinh.Location = new System.Drawing.Point(334, 124);
-            this.ddGioiTinh.Name = "ddGioiTinh";
-            this.ddGioiTinh.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.ddGioiTinh.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.ddGioiTinh.selectedIndex = 0;
-            this.ddGioiTinh.Size = new System.Drawing.Size(272, 35);
-            this.ddGioiTinh.TabIndex = 70;
+            this.ddtenphong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddtenphong.BorderRadius = 3;
+            this.ddtenphong.DisabledColor = System.Drawing.Color.Gray;
+            this.ddtenphong.ForeColor = System.Drawing.Color.White;
+            this.ddtenphong.Items = new string[] {
+        "Phòng 201",
+        "Phòng 202",
+        "Phòng 203",
+        "Phòng 204",
+        "Phòng 205",
+        "Phòng 206",
+        "Phòng 207",
+        "Phòng 208",
+        "Phòng 209",
+        "Phòng 210",
+        "Phòng 211",
+        "Phòng 212"};
+            this.ddtenphong.Location = new System.Drawing.Point(334, 124);
+            this.ddtenphong.Name = "ddtenphong";
+            this.ddtenphong.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddtenphong.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.ddtenphong.selectedIndex = 0;
+            this.ddtenphong.Size = new System.Drawing.Size(272, 35);
+            this.ddtenphong.TabIndex = 70;
+            this.ddtenphong.onItemSelected += new System.EventHandler(this.ddtenphong_Selected);
             // 
             // bunifuFlatButton2
             // 
@@ -237,25 +235,25 @@
             this.pictureBox2.MouseLeave += new System.EventHandler(this.mini_Leave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.mini_Hover);
             // 
-            // bunifuDropdown1
+            // ddsotang
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[] {
+            this.ddsotang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddsotang.BorderRadius = 3;
+            this.ddsotang.DisabledColor = System.Drawing.Color.Gray;
+            this.ddsotang.ForeColor = System.Drawing.Color.White;
+            this.ddsotang.Items = new string[] {
         "2",
         "3",
         "4",
-        "5",
-        "6"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(334, 75);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(272, 35);
-            this.bunifuDropdown1.TabIndex = 72;
+        "5"};
+            this.ddsotang.Location = new System.Drawing.Point(334, 75);
+            this.ddsotang.Name = "ddsotang";
+            this.ddsotang.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddsotang.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.ddsotang.selectedIndex = 0;
+            this.ddsotang.Size = new System.Drawing.Size(272, 35);
+            this.ddsotang.TabIndex = 72;
+            this.ddsotang.onItemSelected += new System.EventHandler(this.ddsotang_Selected);
             // 
             // bunifuDropdown2
             // 
@@ -277,32 +275,32 @@
             this.bunifuDropdown2.Size = new System.Drawing.Size(272, 35);
             this.bunifuDropdown2.TabIndex = 73;
             // 
-            // label5
+            // tenphong
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(138, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 26);
-            this.label5.TabIndex = 74;
-            this.label5.Text = "a";
+            this.tenphong.AutoSize = true;
+            this.tenphong.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenphong.Location = new System.Drawing.Point(191, 15);
+            this.tenphong.Name = "tenphong";
+            this.tenphong.Size = new System.Drawing.Size(98, 26);
+            this.tenphong.TabIndex = 74;
+            this.tenphong.Text = "Phòng 201";
             // 
-            // label6
+            // loaiphong
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(329, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 26);
-            this.label6.TabIndex = 75;
-            this.label6.Text = "Phòng thường";
+            this.loaiphong.AutoSize = true;
+            this.loaiphong.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loaiphong.Location = new System.Drawing.Point(382, 15);
+            this.loaiphong.Name = "loaiphong";
+            this.loaiphong.Size = new System.Drawing.Size(133, 26);
+            this.loaiphong.TabIndex = 75;
+            this.loaiphong.Text = "Phòng Thường";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(195)))));
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.loaiphong);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.tenphong);
             this.panel2.Controls.Add(this.bunifuDropdown2);
             this.panel2.Location = new System.Drawing.Point(0, 179);
             this.panel2.Name = "panel2";
@@ -334,8 +332,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 409);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.bunifuDropdown1);
-            this.Controls.Add(this.ddGioiTinh);
+            this.Controls.Add(this.ddsotang);
+            this.Controls.Add(this.ddtenphong);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.btdatphong);
             this.Controls.Add(this.label3);
@@ -357,7 +355,7 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuDropdown ddGioiTinh;
+        private Bunifu.Framework.UI.BunifuDropdown ddtenphong;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton btdatphong;
         private System.Windows.Forms.Label label4;
@@ -367,10 +365,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown ddsotang;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label tenphong;
+        private System.Windows.Forms.Label loaiphong;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;

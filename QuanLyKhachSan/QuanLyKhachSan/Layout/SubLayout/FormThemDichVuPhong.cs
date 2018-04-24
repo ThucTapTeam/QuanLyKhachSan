@@ -51,7 +51,6 @@ namespace QuanLyKhachSan.Layout.SubLayout
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void mini_Click(object sender, EventArgs e)
@@ -62,6 +61,16 @@ namespace QuanLyKhachSan.Layout.SubLayout
         private void bthuy_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        Controller.ThemDVPhongController dvphong = new Controller.ThemDVPhongController();
+        private void ddsotang_Selected(object sender, EventArgs e)
+        {
+            dvphong.LayTenPhong(ddsotang,ddtenphong);
+        }
+
+        private void ddtenphong_Selected(object sender, EventArgs e)
+        {
+            dvphong.LayLoaiPhong(ddtenphong,tenphong,loaiphong);
         }
     }
 }
