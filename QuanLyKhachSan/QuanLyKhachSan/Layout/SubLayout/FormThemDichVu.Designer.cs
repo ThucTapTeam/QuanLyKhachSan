@@ -33,9 +33,7 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tbgiatien = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tbsoluong = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbtendv = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -129,46 +127,22 @@
             this.tbgiatien.Border.Class = "TextBoxBorder";
             this.tbgiatien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbgiatien.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbgiatien.Location = new System.Drawing.Point(315, 180);
+            this.tbgiatien.Location = new System.Drawing.Point(315, 173);
             this.tbgiatien.Name = "tbgiatien";
             this.tbgiatien.PreventEnterBeep = true;
             this.tbgiatien.Size = new System.Drawing.Size(272, 29);
             this.tbgiatien.TabIndex = 30;
             this.tbgiatien.WatermarkText = "VD: 1234000";
             // 
-            // tbsoluong
-            // 
-            // 
-            // 
-            // 
-            this.tbsoluong.Border.Class = "TextBoxBorder";
-            this.tbsoluong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbsoluong.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbsoluong.Location = new System.Drawing.Point(315, 136);
-            this.tbsoluong.Name = "tbsoluong";
-            this.tbsoluong.PreventEnterBeep = true;
-            this.tbsoluong.Size = new System.Drawing.Size(272, 29);
-            this.tbsoluong.TabIndex = 28;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(98, 183);
+            this.label4.Location = new System.Drawing.Point(98, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 26);
+            this.label4.Size = new System.Drawing.Size(80, 26);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Giá tiền / 1 cái";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 26);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Số lượng";
+            this.label4.Text = "Giá tiền ";
             // 
             // tbtendv
             // 
@@ -178,7 +152,7 @@
             this.tbtendv.Border.Class = "TextBoxBorder";
             this.tbtendv.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbtendv.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbtendv.Location = new System.Drawing.Point(315, 88);
+            this.tbtendv.Location = new System.Drawing.Point(315, 106);
             this.tbtendv.Name = "tbtendv";
             this.tbtendv.PreventEnterBeep = true;
             this.tbtendv.Size = new System.Drawing.Size(272, 29);
@@ -188,7 +162,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 90);
+            this.label1.Location = new System.Drawing.Point(98, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 26);
             this.label1.TabIndex = 24;
@@ -258,7 +232,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(560, 181);
+            this.label5.Location = new System.Drawing.Point(560, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 26);
             this.label5.TabIndex = 36;
@@ -288,9 +262,7 @@
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.tbgiatien);
-            this.Controls.Add(this.tbsoluong);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbtendv);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -310,9 +282,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private DevComponents.DotNetBar.Controls.TextBoxX tbgiatien;
-        private DevComponents.DotNetBar.Controls.TextBoxX tbsoluong;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private DevComponents.DotNetBar.Controls.TextBoxX tbtendv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;

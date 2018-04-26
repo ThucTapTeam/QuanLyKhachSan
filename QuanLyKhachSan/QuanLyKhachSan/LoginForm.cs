@@ -69,11 +69,11 @@ namespace QuanLyKhachSan
             nv.HoTen = null;
             nv.ChucVu = "Chưa có dữ liệu";
             nv.Avatar = "../img/avatar1.jpg";
-            if((cn.login(nv.MaNhanVien.ToUpper(),"select MANHANVIEN FROM NHANVIEN", 0))==true && (cn.login(nv.MatKhau, "select PASS FROM NHANVIEN", 0)) == true)
+            if((cn.login(nv.MaNhanVien.ToUpper(), "EXEC PROC_SELECT_MANHANVIEN ", 0))==true && (cn.login(nv.MatKhau, "select PASS FROM NHANVIEN", 0)) == true)
             {
-                nv.HoTen = cn.LayBien("select HOTEN FROM NHANVIEN where MANHANVIEN='"+ nv.MaNhanVien + "'", 0);
-                nv.ChucVu = cn.LayBien("select CHUCVU FROM NHANVIEN where MANHANVIEN='" + nv.MaNhanVien + "'", 0);
-                nv.Avatar = cn.LayBien("select AVATAR FROM NHANVIEN where MANHANVIEN='" + nv.MaNhanVien + "'", 0);
+                nv.HoTen = cn.LayBien("EXEC PROC_SELECT_HOTEN '" + nv.MaNhanVien + "'", 0);
+                nv.ChucVu = cn.LayBien("EXEC PROC_SELECT_CHUCVU'" + nv.MaNhanVien + "'", 0);
+                nv.Avatar = cn.LayBien("EXEC PROC_SELECT_AVATAR '" + nv.MaNhanVien + "'", 0);
                 MainForm mf = new MainForm(nv.HoTen, nv.ChucVu, nv.Avatar);
                 this.Hide();
                 mf.Show();

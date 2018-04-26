@@ -129,7 +129,7 @@ namespace QuanLyKhachSan.Controller
             p1.TenPhong = null;
             p2.TenPhong = null;
             p3.TenPhong = null;
-            if (temp.ToString().Length == 1)
+            if (a.ToString().Length == 1)
             {
                 ghepmaphong = "P" + temp.ToString() + "0" + a.ToString();
             }

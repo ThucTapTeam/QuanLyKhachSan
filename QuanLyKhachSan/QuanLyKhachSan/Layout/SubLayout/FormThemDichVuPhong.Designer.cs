@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ddsotang = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddDichVu = new Bunifu.Framework.UI.BunifuDropdown();
             this.tenphong = new System.Windows.Forms.Label();
             this.loaiphong = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -255,25 +255,20 @@
             this.ddsotang.TabIndex = 72;
             this.ddsotang.onItemSelected += new System.EventHandler(this.ddsotang_Selected);
             // 
-            // bunifuDropdown2
+            // ddDichVu
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.Items = new string[] {
-        "2",
-        "3",
-        "4",
-        "5",
-        "6"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(334, 60);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.bunifuDropdown2.selectedIndex = 0;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(272, 35);
-            this.bunifuDropdown2.TabIndex = 73;
+            this.ddDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddDichVu.BorderRadius = 3;
+            this.ddDichVu.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.ddDichVu.ForeColor = System.Drawing.Color.White;
+            this.ddDichVu.Items = new string[0];
+            this.ddDichVu.Location = new System.Drawing.Point(334, 60);
+            this.ddDichVu.Name = "ddDichVu";
+            this.ddDichVu.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
+            this.ddDichVu.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.ddDichVu.selectedIndex = -1;
+            this.ddDichVu.Size = new System.Drawing.Size(272, 35);
+            this.ddDichVu.TabIndex = 73;
             // 
             // tenphong
             // 
@@ -301,7 +296,7 @@
             this.panel2.Controls.Add(this.loaiphong);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.tenphong);
-            this.panel2.Controls.Add(this.bunifuDropdown2);
+            this.panel2.Controls.Add(this.ddDichVu);
             this.panel2.Location = new System.Drawing.Point(0, 179);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(721, 111);
@@ -366,7 +361,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuDropdown ddsotang;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private Bunifu.Framework.UI.BunifuDropdown ddDichVu;
         private System.Windows.Forms.Label tenphong;
         private System.Windows.Forms.Label loaiphong;
         private System.Windows.Forms.Panel panel2;

@@ -38,7 +38,7 @@ namespace QuanLyKhachSan
             }
             ngatketnoi();
         }
-        public void LayTenPhong(string[] temp, string strsql,out int i, int cot)
+        public void LayMangSql(string[] temp, string strsql,out int i, int cot)
         {
             i = 0;
             ketnoi();

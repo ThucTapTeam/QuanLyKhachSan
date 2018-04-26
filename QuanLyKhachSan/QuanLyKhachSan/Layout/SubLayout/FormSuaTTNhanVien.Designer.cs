@@ -124,6 +124,7 @@
             this.ddGioiTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(50)))), ((int)(((byte)(67)))));
             this.ddGioiTinh.BorderRadius = 3;
             this.ddGioiTinh.DisabledColor = System.Drawing.Color.Gray;
+            this.ddGioiTinh.Enabled = false;
             this.ddGioiTinh.ForeColor = System.Drawing.Color.White;
             this.ddGioiTinh.Items = new string[] {
         "Nam",
@@ -302,6 +303,7 @@
             // 
             this.tbhoten.Border.Class = "TextBoxBorder";
             this.tbhoten.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbhoten.Enabled = false;
             this.tbhoten.Font = new System.Drawing.Font("Quicksand", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbhoten.Location = new System.Drawing.Point(315, 115);
             this.tbhoten.Name = "tbhoten";

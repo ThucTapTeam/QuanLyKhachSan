@@ -235,5 +235,21 @@ namespace QuanLyKhachSan
             }
             return check;
         }
+        public string CH_UpperFirstText(string a)
+        {
+            string temp = null;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if(i==0)
+                {
+                    temp += a[i].ToString().ToUpper();
+                }
+                else
+                {
+                    temp += a[i];
+                }
+            }
+            return temp;
+        }
     }
 }

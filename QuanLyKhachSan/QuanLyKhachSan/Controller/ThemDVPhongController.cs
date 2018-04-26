@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.Controller
         {
             string[] tenphong = new string[15];
             int m;
-            conn.LayTenPhong(tenphong, "EXEC PRO_SELECT_TENPHONG " + ddsotang.selectedValue,out m, 0);
+            conn.LayMangSql(tenphong, "EXEC PRO_SELECT_TENPHONG " + ddsotang.selectedValue,out m, 0);
             ddtenphong.Clear();
             for (int i=0;i<m;i++)
             {
@@ -25,8 +25,21 @@ namespace QuanLyKhachSan.Controller
         }
         public void LayLoaiPhong(BunifuDropdown ddtenphong,Label tenphong,Label loaiphong)
         {
+            
             tenphong.Text = ddtenphong.selectedValue;
             loaiphong.Text = conn.LayBien("EXEC PROC_SELECT_MALOAIPHONG N'" + tenphong.Text + "'", 0);
+        }
+        public void LayTenDichVu(BunifuDropdown ddDichVu)
+        {
+            int n;
+            string[] tendichvu = new string[100];
+            conn.LayMangSql(tendichvu, "EXEC PROC_SELECT_TENDICHVU",out n, 0);
+            ddDichVu.Clear();
+            for( int i=0;i<n;i++)
+            {
+                ddDichVu.AddItem(tendichvu[i]);
+            }
+            ddDichVu.selectedIndex = 0;
         }
     }
 }

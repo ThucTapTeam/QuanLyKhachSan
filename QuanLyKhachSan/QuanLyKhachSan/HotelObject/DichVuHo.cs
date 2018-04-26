@@ -29,12 +29,5 @@ namespace QuanLyKhachSan.HotelObject
             set { m_giatien = value; }
         }
 
-        private int m_soluong;
-        public int SoLuong
-        {
-            get { return m_soluong; }
-            set { m_soluong = value; }
-
-        }
     }
 }

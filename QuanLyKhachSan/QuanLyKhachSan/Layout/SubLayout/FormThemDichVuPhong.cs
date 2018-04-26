@@ -12,9 +12,11 @@ namespace QuanLyKhachSan.Layout.SubLayout
 {
     public partial class FormThemDichVuPhong : Form
     {
+        Controller.ThemDVPhongController dvphong = new Controller.ThemDVPhongController();
         public FormThemDichVuPhong()
         {
             InitializeComponent();
+            dvphong.LayTenDichVu(ddDichVu);
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -62,7 +64,7 @@ namespace QuanLyKhachSan.Layout.SubLayout
         {
             this.Hide();
         }
-        Controller.ThemDVPhongController dvphong = new Controller.ThemDVPhongController();
+        
         private void ddsotang_Selected(object sender, EventArgs e)
         {
             dvphong.LayTenPhong(ddsotang,ddtenphong);
