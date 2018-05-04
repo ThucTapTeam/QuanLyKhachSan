@@ -134,9 +134,14 @@ namespace QuanLyKhachSan.Layout
 
         private void btdattraphong_Click(object sender, EventArgs e)
         {
-            conn.InsertDeleteUpdate("UPDATE THUEPHONG SET TRANGTHAI=0 WHERE MAPHONG IN (SELECT MAPHONG FROM PHONG WHERE TENPHONG='"+ laytenphong + "')");
-            tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
-            tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
+            if (btdattraphong.Text == "Trả Phòng")
+            {
+                SubLayout.FormThanhToan ftt = new SubLayout.FormThanhToan(laytenphong, tang);
+                ftt.Show();
+                conn.InsertDeleteUpdate("UPDATE THUEPHONG SET TRANGTHAI=0 WHERE MAPHONG IN (SELECT MAPHONG FROM PHONG WHERE TENPHONG='" + laytenphong + "')");
+                tcc.Phong(label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15, tang);
+                tcc.RoomColor(panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15, tang);
+            }
         }
 
         private void btlammoi_Click(object sender, EventArgs e)

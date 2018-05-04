@@ -147,13 +147,13 @@ namespace QuanLyKhachSan.Controller
                 btdattraphong.Cursor = Cursors.Hand;
                 //label16.Text = "phong dang o";
                 laytenphong = p.TenPhong;
+                
             }
             if (p1.TenPhong != null)
             {
                 btdattraphong.Text = "Đặt Phòng";
                 btdattraphong.Cursor = Cursors.Default;
                 FormDatPhong dp = new FormDatPhong(p1.TenPhong, temp.ToString());
-                //FormDatPhong dp = new FormDatPhong();
                 dp.Show();
 
             }

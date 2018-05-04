@@ -54,6 +54,8 @@
     <Compile Include="Controller\ChuanHoa.cs" />
     <Compile Include="Controller\Connection.cs" />
     <Compile Include="Controller\DatPhongController.cs" />
+    <Compile Include="Controller\DoanhThuController.cs" />
+    <Compile Include="Controller\ThanhToanController.cs" />
     <Compile Include="Controller\ThemDVController.cs" />
     <Compile Include="Controller\ThemDVPhongController.cs" />
     <Compile Include="Controller\ThemNVController.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="HotelObject\KhachHangHo.cs" />
     <Compile Include="HotelObject\NhanVienHo.cs" />
     <Compile Include="HotelObject\PhongHo.cs" />
+    <Compile Include="HotelObject\ThanhToanHo.cs" />
     <Compile Include="HotelObject\ThuePhongHo.cs" />
     <Compile Include="Layout\QLPhong.cs">
       <SubType>UserControl</SubType>
@@ -98,6 +101,12 @@
     </Compile>
     <Compile Include="Layout\SubLayout\FormSuaTTNhanVien.Designer.cs">
       <DependentUpon>FormSuaTTNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\SubLayout\FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\SubLayout\FormThemDichVu.cs">
       <SubType>Form</SubType>
@@ -160,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\SubLayout\FormSuaTTNhanVien.resx">
       <DependentUpon>FormSuaTTNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SubLayout\FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\SubLayout\FormThemDichVu.resx">
       <DependentUpon>FormThemDichVu.cs</DependentUpon>

@@ -74,5 +74,15 @@ namespace QuanLyKhachSan.Layout.SubLayout
         {
             dvphong.LayLoaiPhong(ddtenphong,tenphong,loaiphong);
         }
+
+        private void btthemdichvu_Click(object sender, EventArgs e)
+        {
+            int transfer;
+            dvphong.ThemDichVu(ddtenphong,ddDichVu,out transfer);
+            if(transfer==1)
+            {
+                this.Hide();
+            }
+        }
     }
 }

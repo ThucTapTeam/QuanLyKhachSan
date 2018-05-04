@@ -123,7 +123,7 @@
             this.btdatphong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(88)))));
             this.btdatphong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btdatphong.BorderRadius = 0;
-            this.btdatphong.ButtonText = "ĐẶT PHÒNG";
+            this.btdatphong.ButtonText = "THÊM DỊCH VỤ";
             this.btdatphong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btdatphong.DisabledColor = System.Drawing.Color.Gray;
             this.btdatphong.Iconcolor = System.Drawing.Color.Transparent;
@@ -146,10 +146,11 @@
             this.btdatphong.selected = false;
             this.btdatphong.Size = new System.Drawing.Size(206, 48);
             this.btdatphong.TabIndex = 67;
-            this.btdatphong.Text = "ĐẶT PHÒNG";
+            this.btdatphong.Text = "THÊM DỊCH VỤ";
             this.btdatphong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btdatphong.Textcolor = System.Drawing.Color.White;
             this.btdatphong.TextFont = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdatphong.Click += new System.EventHandler(this.btthemdichvu_Click);
             // 
             // label4
             // 

@@ -251,5 +251,14 @@ namespace QuanLyKhachSan
             }
             return temp;
         }
+        public string TongTien(string ngayra,string ngayvao,int giatien)
+        {
+            DateTime ngayra1 = Convert.ToDateTime(ngayra);
+            DateTime ngayvao1 = Convert.ToDateTime(ngayvao);
+            TimeSpan a = ngayra1 - ngayvao1;
+            int day = a.Days+1;
+            int tongtien = day * giatien;
+            return tongtien.ToString();
+        }
     }
 }

@@ -36,11 +36,11 @@ namespace QuanLyKhachSan.HotelObject
             set { m_ngayvao = value; }
         }
 
-        private string m_ngaydat;
-        public string NgayDat
+        private string m_ngayra;
+        public string NgayRa
         {
-            get { return m_ngaydat; }
-            set { m_ngaydat = value; }
+            get { return m_ngayra; }
+            set { m_ngayra = value; }
         }
 
         private string m_trangthai;

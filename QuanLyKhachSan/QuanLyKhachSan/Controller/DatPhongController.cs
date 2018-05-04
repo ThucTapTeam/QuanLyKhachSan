@@ -60,20 +60,22 @@ namespace QuanLyKhachSan.Controller
             {     
                 kh.TenKhachHang = ch.CH_Name(tbhoten);
                 kh.SoCMT = ch.CH_Space(tbsocmt);
-                string temp = null, temp2 = null;
+                string temp = null,temp2=null;
                 kh.MaKhachHang= cn.LayBien("select makhachhang from khachhang order by makhachhang asc", 0);
                 tp.MaThue = cn.LayBien("select mathue from thuephong order by mathue asc", 0);
+                for (int i = 2; i < tp.MaThue.Length; i++)
+                {
+                    temp2 = temp2 + tp.MaThue[i];
+                }
+                tp.MaThue = "TP" + (Int32.Parse(temp2) + 1).ToString();
                 p.MaPhong = cn.LayBien("select maphong from phong where tenphong='" + label2.Text + "'", 0);
                 for (int i = 2; i < kh.MaKhachHang.Length; i++)
                 {
                     temp = temp + kh.MaKhachHang[i];
                 }
-                for (int i = 2; i < tp.MaThue.Length; i++)
-                {
-                    temp2 = temp2 + tp.MaThue[i];
-                }
+                
                 kh.MaKhachHang = "KH" + (Int32.Parse(temp) + 1).ToString();
-                tp.MaThue = "TP" + (Int32.Parse(temp2) + 1).ToString();
+                
                 cn.InsertDeleteUpdate("INSERT INTO KHACHHANG VALUES('" + kh.MaKhachHang + "',N'" + kh.TenKhachHang + "',N'" + ddGioiTinh.selectedValue + "','" + kh.SoCMT + "','" + tbphone.Text + "')");
                 cn.InsertDeleteUpdate("INSERT INTO THUEPHONG VALUES('" + tp.MaThue + "','" + kh.MaKhachHang + "','" + p.MaPhong + "','" + year + month + day + "','" + year1 + month1 + day1 + "',1)");
                 Notification nf = new Notification("ĐẶT PHÒNG", "Đặt phòng thành công.", "");
