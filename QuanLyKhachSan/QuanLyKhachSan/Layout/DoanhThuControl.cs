@@ -17,17 +17,17 @@ namespace QuanLyKhachSan.Layout
         {
             InitializeComponent();
             DPDoanhThu.Value = DateTime.Now;
-            dtc.DoanhThuTong1(switchdoanhthu, DPDoanhThu, lbdtdatphong, lbsophong);
+            dtc.DoanhThuTong1(switchdoanhthu, DPDoanhThu, lbdtdatphong, lbsophong,lbdichvu);
         }
         
         private void switchdoanhthu_Change(object sender, EventArgs e)
         {
-            dtc.DoanhThuTong(switchdoanhthu,DPDoanhThu,lbdtdatphong, lbsophong);
+            dtc.DoanhThuTong(switchdoanhthu,DPDoanhThu,lbdtdatphong, lbsophong,lbdichvu);
         }
 
         private void DPDoanhThu_Change(object sender, EventArgs e)
         {
-            dtc.DoanhThuTong1(switchdoanhthu, DPDoanhThu, lbdtdatphong,lbsophong);
+            dtc.DoanhThuTong1(switchdoanhthu, DPDoanhThu, lbdtdatphong,lbsophong,lbdichvu);
         }
     }
 }

@@ -12,10 +12,11 @@ namespace QuanLyKhachSan.Controller
     {
         Connection conn = new Connection();
         ChuanHoa ch = new ChuanHoa();
-        public void ThanhToan(Label lbtenphong,Label lbhoten,Label lbloaiphong,Label lbngayvao,Label lbngayra,Label lbthanhtien)
+        public void ThanhToan(Label lbtenphong,Label lbhoten,Label lbloaiphong,Label lbngayvao,Label lbngayra,Label lbthanhtien,Label lbdichvu,Label lbtongtien)
         {
             HotelObject.ThanhToanHo tt = new HotelObject.ThanhToanHo();
             HotelObject.ThuePhongHo tp = new HotelObject.ThuePhongHo();
+            HotelObject.SuDungDichVuHo sd = new HotelObject.SuDungDichVuHo();
             string year, month, day,ngayvao=null;
             string year1, month1, day1, ngayra = null;
             string yearnow, monthnow, daynow;
@@ -32,9 +33,17 @@ namespace QuanLyKhachSan.Controller
             string giatien = conn.LayBien("EXEC PROC_SELECT_GIATIEN N'" + lbtenphong.Text + "'",0);
             string tongtientt=ch.TongTien(ngayra, ngayvao, Int32.Parse(giatien));
 
+            sd.DonGia = conn.LayBien("EXEC PROC_SELECT_DONGIADV N'" + lbtenphong.Text + "'",0);
+            if(sd.DonGia == "")
+            {
+                sd.DonGia = "0";
+            }
+            lbdichvu.Text= sd.DonGia.ToString();
+            
             TimeSpan time = DateTime.Parse(tp.NgayRa) - DateTime.Parse(tp.NgayVao);
             int dayz = time.Days+1;
             lbthanhtien.Text = (Int32.Parse(tongtientt) *dayz *1000).ToString();
+            lbtongtien.Text = (Int32.Parse(sd.DonGia) + (Int32.Parse(tongtientt) * dayz * 1000)).ToString();
             conn.InsertDeleteUpdate("EXEC PROC_INSERT_THANHTOAN '"+tp.MaThue+"','"+giatien+"','"+yearnow+monthnow+daynow+"'");
         }
     }

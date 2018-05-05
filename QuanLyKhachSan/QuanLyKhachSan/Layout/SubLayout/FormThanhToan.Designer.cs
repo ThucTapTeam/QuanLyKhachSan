@@ -59,7 +59,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbtongtien = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -375,15 +375,15 @@
             this.label10.TabIndex = 73;
             this.label10.Text = "đ";
             // 
-            // label12
+            // lbtongtien
             // 
-            this.label12.Font = new System.Drawing.Font("Quicksand Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(396, 456);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(207, 40);
-            this.label12.TabIndex = 72;
-            this.label12.Text = "201";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbtongtien.Font = new System.Drawing.Font("Quicksand Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtongtien.Location = new System.Drawing.Point(396, 456);
+            this.lbtongtien.Name = "lbtongtien";
+            this.lbtongtien.Size = new System.Drawing.Size(207, 40);
+            this.lbtongtien.TabIndex = 72;
+            this.lbtongtien.Text = "201";
+            this.lbtongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormThanhToan
             // 
@@ -391,7 +391,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 583);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lbtongtien);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbthanhtien);
@@ -456,7 +456,7 @@
         private System.Windows.Forms.Label lbthanhtien;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbtongtien;
         private System.Windows.Forms.Label label7;
     }
 }

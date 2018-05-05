@@ -17,6 +17,7 @@ namespace QuanLyKhachSan.Layout.SubLayout
         {
             InitializeComponent();
             dvphong.LayTenDichVu(ddDichVu);
+            dvphong.LayTenPhong(ddsotang, ddtenphong);
         }
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -78,10 +79,18 @@ namespace QuanLyKhachSan.Layout.SubLayout
         private void btthemdichvu_Click(object sender, EventArgs e)
         {
             int transfer;
-            dvphong.ThemDichVu(ddtenphong,ddDichVu,out transfer);
-            if(transfer==1)
+            if (ddtenphong.selectedIndex!=-1)
             {
-                this.Hide();
+                dvphong.ThemDichVu(ddtenphong, ddDichVu, out transfer);
+                if (transfer == 1)
+                {
+                    this.Hide();
+                }
+            }
+            else
+            {
+                Notification nf = new Notification("LỖI", "Bạn chưa chọn phòng.", "");
+                nf.Show();
             }
         }
     }

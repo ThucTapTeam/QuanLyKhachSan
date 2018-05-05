@@ -64,6 +64,7 @@
     <Compile Include="HotelObject\KhachHangHo.cs" />
     <Compile Include="HotelObject\NhanVienHo.cs" />
     <Compile Include="HotelObject\PhongHo.cs" />
+    <Compile Include="HotelObject\SuDungDichVuHo.cs" />
     <Compile Include="HotelObject\ThanhToanHo.cs" />
     <Compile Include="HotelObject\ThuePhongHo.cs" />
     <Compile Include="Layout\QLPhong.cs">

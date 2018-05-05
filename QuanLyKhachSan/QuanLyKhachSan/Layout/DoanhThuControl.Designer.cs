@@ -225,7 +225,7 @@
             this.lbdtdatphong.Font = new System.Drawing.Font("Quicksand Medium", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdtdatphong.Location = new System.Drawing.Point(12, 49);
             this.lbdtdatphong.Name = "lbdtdatphong";
-            this.lbdtdatphong.Size = new System.Drawing.Size(147, 33);
+            this.lbdtdatphong.Size = new System.Drawing.Size(158, 33);
             this.lbdtdatphong.TabIndex = 21;
             this.lbdtdatphong.Text = "9.000.000";
             this.lbdtdatphong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

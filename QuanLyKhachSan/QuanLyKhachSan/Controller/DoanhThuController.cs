@@ -14,7 +14,7 @@ namespace QuanLyKhachSan.Controller
         HotelObject.ThanhToanHo tt = new HotelObject.ThanhToanHo();
         Connection conn = new Connection();
         string sophong = "0";
-        public void DoanhThuTong(BunifuiOSSwitch switchdoanhthu,BunifuDatepicker DPDoanhThu,Label lbdtdatphong,Label lbsophong)
+        public void DoanhThuTong(BunifuiOSSwitch switchdoanhthu,BunifuDatepicker DPDoanhThu,Label lbdtdatphong,Label lbsophong,Label lbdichvu)
         {
            
             string day, month, year;
@@ -43,7 +43,7 @@ namespace QuanLyKhachSan.Controller
                 lbsophong.Text = sophong;
             }
         }
-        public void DoanhThuTong1(BunifuiOSSwitch switchdoanhthu, BunifuDatepicker DPDoanhThu, Label lbdtdatphong, Label lbsophong)
+        public void DoanhThuTong1(BunifuiOSSwitch switchdoanhthu, BunifuDatepicker DPDoanhThu, Label lbdtdatphong, Label lbsophong,Label lbdichvu)
         {
             string day, month, year;
             if (switchdoanhthu.Value == true)
