@@ -450,6 +450,9 @@
 
         }
         //blobablaoflasdfasdfasdgasdf
+        /// <summary>
+        //ádfasdfasdfasd ádfasdfasdf
+        /// </summary>
         #endregion
 
         private Bunifu.Framework.UI.BunifuDropdown ddGioiTinh;

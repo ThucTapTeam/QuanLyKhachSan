@@ -64,6 +64,7 @@ namespace QuanLyKhachSan
             ngatketnoi();
             return temp;
         }
+        //so phong
         public string sophong(string strsql,byte cot)
         {
             ketnoi();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.HotelObject
 {
+    //Class PhongHo 
     public class PhongHo
     {
         private string m_MaPhong;
